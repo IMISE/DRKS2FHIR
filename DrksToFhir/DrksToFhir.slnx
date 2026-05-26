@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="DrksToFhir.Client/DrksToFhir.Client.csproj" />
+  <Project Path="DrksToFhir.Core/DrksToFhir.Core.csproj" />
+</Solution>
