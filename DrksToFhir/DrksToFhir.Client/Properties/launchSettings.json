@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DrksToFhir.Client": {
+      "commandName": "Project",
+      "commandLineArgs": "DRKS_trial-DRKS00038775.json output.json"
+    }
+  }
+}

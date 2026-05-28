@@ -1,4 +1,4 @@
-﻿using DrksToFhir.Core.Enum;
+﻿using DrksToFhir.Core.Enums;
 using System.Text.Json.Serialization;
 
 namespace DrksToFhir.Core.Models

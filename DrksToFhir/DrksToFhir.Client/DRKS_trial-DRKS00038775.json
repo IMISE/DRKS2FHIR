@@ -1,0 +1,384 @@
+{
+    "drksId": "DRKS00038775",
+    "ethicsCommittee": {
+        "applicationDate": "2025-03-18",
+        "ethicVotes": [
+            {
+                "contact": {
+                    "affiliation": "Ethik-Kommission der Ärztekammer Berlin",
+                    "city": "Berlin",
+                    "country": "DE",
+                    "email": "ek@aekb.de",
+                    "fax": null,
+                    "firstName": null,
+                    "lastName": null,
+                    "phone": "(+49)30-408062601",
+                    "streetAndNo": "Friedrichstraße 16",
+                    "title": null,
+                    "url": "www.aekb.de/kammer/kommissionen/ethik-kommission",
+                    "zip": "10696"
+                },
+                "dateOfVote": "2025-08-21",
+                "type": "ETHICS_COMMITTEE",
+                "vote": "APPROVED"
+            }
+        ],
+        "number": "Eth-SB-25-018"
+    },
+    "lastUpdate": "2025-12-17",
+    "materialSupports": [
+        {
+            "contact": {
+                "affiliation": "Endokrinologikum Berlin",
+                "city": "Berlin",
+                "country": "DE",
+                "email": null,
+                "fax": null,
+                "firstName": null,
+                "lastName": null,
+                "phone": null,
+                "streetAndNo": "Friedrichstr. 76",
+                "title": null,
+                "url": "https://www.endokrinologikum-berlin.de/",
+                "zip": "10117"
+            },
+            "type": "INSTITUTIONAL"
+        }
+    ],
+    "observationalGroups": [
+        {
+            "comment": "Pat. aus zwei DVO Osteologie Schwerpunktzentren (Endokrinologikum Berlin und Immanuelkrankenhaus Berlin Wannsee) mit einer der folgenden seltenen osteologischen Erkrankungen: Schwangerschafts- und Stillzeit-assoziierte Osteoporose, Methotrexat-induzierte Osteopathie, Osteoporose bei Mastozytose",
+            "idArm": {
+                "arm": 1,
+                "locale": "de"
+            }
+        },
+        {
+            "comment": "Patients from two DVO Osteology Centers of Excellence (Endokrinologikum Berlin and Immanuelkrankenhaus Berlin Wannsee) with one of the following rare osteological diseases: pregnancy- and lactation-associated osteoporosis, methotrexate-induced osteopathy, osteoporosis in mastocytosis",
+            "idArm": {
+                "arm": 1,
+                "locale": "en"
+            }
+        }
+    ],
+    "otherSecondaryIds": [
+    ],
+    "recruitment": {
+        "actualCompletionDate": null,
+        "actualStartDate": "2025-11-01",
+        "centricType": "MULTICENTRIC",
+        "countries": [
+            {
+                "idCountry": {
+                    "code": "DE"
+                }
+            }
+        ],
+        "gender": "ALL",
+        "healthyVolunteers": false,
+        "institutes": [
+            {
+                "city": "Berlin",
+                "name": "Immanuelkrankenhaus Berlin Wannsee",
+                "type": "MEDICAL_CENTER"
+            },
+            {
+                "city": "Berlin",
+                "name": null,
+                "type": "PRACTICE"
+            }
+        ],
+        "maximumAge": {
+            "amount": null,
+            "unit": "NO_MAX_AGE"
+        },
+        "minimumAge": {
+            "amount": 18,
+            "unit": "YEARS"
+        },
+        "plannedParticipants": null,
+        "recruitmentDescriptions": [
+            {
+                "exclusionCriteria": "Ausschlusskriterien umfassen keine sichere Diagnose bzw. Minderjährigkeit.",
+                "idLocale": {
+                    "locale": "de"
+                },
+                "inclusionCriteria": "Alle volljährigen Patient*innen, bei welchen eine Schwangerschaft-assoziierte Osteoporose oder eine Osteoporose im Rahmen einer Mastozytose oder eine Methotrexat-induzierte Osteopathie diagnostiziert wurde seit den 1990er Jahren am Immanuel Krankenhaus Wannsee bzw. dem Endokrinologikum, werden in die retrospektive Datenanalyse eingeschlossen.",
+                "reasonDescription": null
+            },
+            {
+                "exclusionCriteria": "Exclusion criteria include an uncertain diagnosis or minor age.",
+                "idLocale": {
+                    "locale": "en"
+                },
+                "inclusionCriteria": "All adult patients in whom pregnancy-associated osteoporosis, osteoporosis in the context of mastocytosis, or methotrexate-induced osteopathy was diagnosed since the 1990s at Immanuel Hospital Wannsee or at Endokrinologikum will be included in the retrospective data analysis.",
+                "reasonDescription": null
+            }
+        ],
+        "scheduledCompletionDate": "2026-12-31",
+        "scheduledStartDate": null,
+        "status": "RECRUITING",
+        "totalParticipants": null
+    },
+    "registrationDrks": "2025-12-17",
+    "registrationType": "RETROSPECTIVE",
+    "secondaryIds": {
+        "eudamedNumber": null,
+        "eudraCtNumber": null,
+        "noOtherIdentificationNumbersAvailable": true,
+        "otherPrimaryRegisterId": null,
+        "otherPrimaryRegisterName": null,
+        "universalTrialNumber": null
+    },
+    "sponsored": true,
+    "studiedHealthConditions": [
+        {
+            "catalog": "FREETEXT",
+            "code": null,
+            "studiedHealthConditionDescriptions": [
+                {
+                    "comment": "Schwangerschafts- und Stillzeit-assoziierte Osteoporose, Methotrexat-induzierte Osteopathie, Osteoporose bei Mastozytose",
+                    "idLocale": {
+                        "locale": "de"
+                    }
+                },
+                {
+                    "comment": "pregnancy- and lactation-associated osteoporosis, methotrexate-induced osteopathy, osteoporosis in mastocytosis",
+                    "idLocale": {
+                        "locale": "en"
+                    }
+                }
+            ],
+            "type": "MAIN"
+        },
+        {
+            "catalog": "FREETEXT",
+            "code": null,
+            "studiedHealthConditionDescriptions": [
+                {
+                    "comment": "ORPHA:647823 Schwangerschaft- und Stillzeit-assoziierte Osteoporose",
+                    "idLocale": {
+                        "locale": "de"
+                    }
+                },
+                {
+                    "comment": "ORPHA:647823 Pregnancy and lactation-associated osteoporosis",
+                    "idLocale": {
+                        "locale": "en"
+                    }
+                }
+            ],
+            "type": "OTHER"
+        }
+    ],
+    "studyCharacteristic": {
+        "allocation": null,
+        "assignment": null,
+        "blindingType": null,
+        "blindingWhoList": [
+        ],
+        "characteristicDescriptions": [
+            {
+                "idLocale": {
+                    "locale": "de"
+                },
+                "primaryOutcome": "Ziel der Studie ist die deskriptive Beschreibung der Kohorten der o.g. seltenen osteologischen Erkrankungen in Berlin, dabei sollen insbesondere die für „normale“ Osteoporose bekannten Risikofaktoren in diesen speziellen Patientenkohorten erfasst und deskriptiv beschrieben werden (Risikofaktoren wie in der DVO Leitlinie 2023 angegeben)",
+                "secondaryOutcome": "Erfasst werden:\r\n\r\nArt der Einrichtung: Endo/IK Wannsee\r\nAlter des Patienten in Jahren (zur Erstmanifestation und zur Erstdiagnose der Erkrankung; zweimalige Erfassung, da Abweichungen möglich)\r\nGeschlecht (m/w, codiert als 0/1)\r\nKörpergröße in cm\r\nKörpergewicht in kg\r\nBody-Mass-Index (BMI), berechnet in kg/m²\r\nLaborparameter zur Erstdiagnose:\r\nCalcium\r\nAlbumin-korrigiertes Calcium\r\nParathormon (PTH)\r\nAnorganisches Phosphat\r\nGamma-GT\r\nKreatinin\r\nC-reaktives Protein (CRP)\r\nTryptase\r\nBeta-CrossLaps\r\nAlkalische Phosphatase (AP)\r\nOstase\r\n25-Hydroxy-Vitamin D\r\nOsteodensitometrie:\r\nT-Score Lendenwirbelsäule (LWS)\r\nMinimaler T-Score LWS\r\nT-Score Femur gesamt\r\nT-Score Schenkelhals\r\nFrakturdaten:\r\nWirbelkörperfrakturen (Anzahl, Lokalisation, Alter der Frakturen zum Diagnosezeitpunkt)\r\nPeriphere Frakturen (Anzahl, Lokalisation; insbesondere Oberschenkelhals und Humerus; andere Frakturen separat; Alter der Frakturen zum Diagnosezeitpunkt)\r\nOsteoporosemedikation:\r\nEinteilung nach Substanzgruppen (osteoanabol vs. antiresorptiv)\r\nBasismedikation (Vitamin D und ggf. Calcium)\r\nDauer der Medikation\r\nSequenztherapie\r\nMedikation mit osteoporotischem Risikopotenzial (aktuell oder in der Vergangenheit):\r\nGlukokortikoide\r\nProtonenpumpenhemmer (PPI)\r\nAntiepileptika\r\nAntidepressiva\r\nDauer der Anwendung und kumulative Dosis\r\nFamilienanamnese einer Hüftfraktur eines Elternteils bis zum Alter von 75 Jahren\r\nAlkoholkonsum > 50 g/Tag\r\nNikotinkonsum (ja/nein, Pack-Years)\r\nKomorbiditäten:\r\nRheumatoide Arthritis\r\nCOPD\r\nDiabetes mellitus Typ 1\r\nDiabetes mellitus Typ 2\r\nCushing-Syndrom\r\nHypothyreose\r\nHyperthyreose\r\nWachstumshormonmangel bei Hypophyseninsuffizienz\r\nMännlicher Hypogonadismus (hormonablative Therapie oder andere Ursachen)\r\nChronische Herzinsuffizienz\r\nNiereninsuffizienz\r\nBillroth-II-Magenresektion, Gastrektomie oder bariatrische Operation\r\nMonoklonale Gammopathie unklarer Signifikanz (MGUS)\r\nHIV\r\nAxiale Spondyloarthritis\r\nSystemischer Lupus erythematodes\r\nZöliakie\r\nChronisch entzündliche Darmerkrankung\r\nChronische Hyponatriämie\r\nStürze in den letzten 12 Monaten (inkl. Anzahl)\r\nDepression\r\nNeurologische Erkrankungen (Z. n. Schlaganfall, Multiple Sklerose, Morbus Parkinson, Epilepsie, Demenz/Morbus Alzheimer)",
+                "typeOfHiddenAllocation": null,
+                "typeOfSequenceGeneration": null
+            },
+            {
+                "idLocale": {
+                    "locale": "en"
+                },
+                "primaryOutcome": "The aim of the study is to descriptively describe the cohorts of the aforementioned rare osteological diseases in Berlin, with a particular focus on identifying and descriptively describing the risk factors known for \"normal\" osteoporosis in these specific patient cohorts (risk factors as specified in the DVO guideline 2023).",
+                "secondaryOutcome": "Data collected include:\r\n\r\nType of institution: Endo/IK Wannsee\r\n\r\nPatient age in years (at first manifestation and at initial diagnosis of the disease; recorded twice, as these may differ)\r\n\r\nSex (m/f, coded as 0/1)\r\n\r\nHeight in cm\r\n\r\nWeight in kg\r\n\r\nBMI calculated in kg/m²\r\n\r\nLaboratory parameters at initial diagnosis: calcium, albumin-corrected calcium, PTH, inorganic phosphate, gamma-GT, creatinine, CRP, tryptase, Beta-CrossLaps, alkaline phosphatase (AP), osteocalcin (Ostase), 25-hydroxyvitamin D\r\n\r\nOsteodensitometry: T-score lumbar spine, minimum lumbar spine T-score, total femur T-score, femoral neck T-score\r\n\r\nFracture data: vertebral fractures (number and location, age of fractures at time of diagnosis), peripheral fractures (number and location, with particular emphasis on femoral neck and humerus; other fractures recorded separately, age of fractures at time of diagnosis)\r\n\r\nOsteoporosis medication: recorded by class (osteoanabolic vs antiresorptive; basic therapy = vitamin D and, if applicable, calcium), duration of treatment, sequential therapy\r\n\r\nMedications constituting a current or past risk factor for osteoporosis (glucocorticoids, PPIs, antiepileptics, antidepressants), duration of use, and cumulative dose\r\n\r\nFamily history of parental hip fracture up to the age of 75 years\r\n\r\nEthanol intake >50 g/day\r\n\r\nSmoking status (yes/no/pack-years)\r\n\r\nComorbidities (rheumatoid arthritis, COPD, type 1 diabetes mellitus, type 2 diabetes mellitus, Cushing’s syndrome, hypothyroidism, hyperthyroidism, growth hormone deficiency due to pituitary insufficiency, male hypogonadism due to hormone-ablative therapy/other causes, chronic heart failure, renal insufficiency, Billroth II gastric resection or gastrectomy or bariatric surgery, monoclonal gammopathy of undetermined significance, HIV, axial spondyloarthritis, systemic lupus erythematosus, celiac disease, inflammatory bowel disease, chronic hyponatremia, falls within the past 12 months [including number], depression, neurological diseases [history of stroke, multiple sclerosis, Parkinson’s disease, epilepsy, dementia/Alzheimer’s disease]).",
+                "typeOfHiddenAllocation": null,
+                "typeOfSequenceGeneration": null
+            }
+        ],
+        "controlTypes": [
+        ],
+        "duration": "CROSS_SECTIONAL",
+        "phase": null,
+        "purpose": "DIAGNOSTIC",
+        "timing": "RETROSPECTIVE",
+        "type": "NON_INTERVENTIONAL"
+    },
+    "trialContacts": [
+        {
+            "contact": {
+                "affiliation": "Endokrinologikum Berlin",
+                "city": "Berlin",
+                "country": "DE",
+                "email": "berlin@endokrinologikum.com",
+                "fax": null,
+                "firstName": "Paula",
+                "lastName": "Hoff",
+                "phone": "+49302091562290",
+                "streetAndNo": "Freidrichstr. 76",
+                "title": "PD Dr.",
+                "url": "https://www.endokrinologikum-berlin.de/",
+                "zip": "10117"
+            },
+            "idContactIdType": {
+                "type": "PRIMARY_SPONSOR"
+            },
+            "otherType": null
+        },
+        {
+            "contact": {
+                "affiliation": "Endokrinologikum Berlin",
+                "city": "Berlin",
+                "country": "DE",
+                "email": "paula.hoff@amedes-group.com",
+                "fax": null,
+                "firstName": "Paula",
+                "lastName": "Hoff",
+                "phone": "+49302091562290",
+                "streetAndNo": "Friedrichstr. 76",
+                "title": "PD Dr.",
+                "url": "https://www.endokrinologikum-berlin.de/",
+                "zip": "10117"
+            },
+            "idContactIdType": {
+                "type": "PRINCIPAL_COORDINATING_INVESTIGATOR"
+            },
+            "otherType": null
+        },
+        {
+            "contact": {
+                "affiliation": "Endokrinologikum Berlin",
+                "city": "Berlin",
+                "country": "DE",
+                "email": "paula.hoff@amedes-group.com",
+                "fax": null,
+                "firstName": "Paula",
+                "lastName": "Hoff",
+                "phone": "+49302091562290",
+                "streetAndNo": "Friedrichstr. 76",
+                "title": "PD Dr.",
+                "url": "https://www.endokrinologikum-berlin.de/",
+                "zip": "10117"
+            },
+            "idContactIdType": {
+                "type": "PUBLIC_QUERIES"
+            },
+            "otherType": null
+        },
+        {
+            "contact": {
+                "affiliation": "Endokrinologikum Berlin",
+                "city": "Berlin",
+                "country": "DE",
+                "email": "paula.hoff@amedes-group.com",
+                "fax": null,
+                "firstName": "Paula",
+                "lastName": "Hoff",
+                "phone": "+49302091562290",
+                "streetAndNo": "Friedrichstr. 76",
+                "title": "PD Dr.",
+                "url": "https://www.endokrinologikum-berlin.de/",
+                "zip": "10117"
+            },
+            "idContactIdType": {
+                "type": "SCIENTIFIC_QUERIES"
+            },
+            "otherType": null
+        },
+        {
+            "contact": {
+                "affiliation": "Immanuel Krankenhaus Berlin, Standort Berlin-Wannsee",
+                "city": "Berlin",
+                "country": null,
+                "email": "katja.warnecke@immanuelalbertinen.de",
+                "fax": null,
+                "firstName": "Katja",
+                "lastName": "Warnecke",
+                "phone": null,
+                "streetAndNo": "Königstraße 63",
+                "title": "Dr.",
+                "url": null,
+                "zip": "14109"
+            },
+            "idContactIdType": {
+                "type": "COLLABORATOR_OTHER_ADDRESS"
+            },
+            "otherType": "OTHER_PRINCIPAL_COORDINATING_INVESTIGATOR"
+        },
+        {
+            "contact": {
+                "affiliation": "Immanuel Krankenhaus Berlin, Standort Berlin-Wannsee",
+                "city": "Berlin",
+                "country": "DE",
+                "email": "udo.schneider@immanuelalbertinen.de",
+                "fax": null,
+                "firstName": "Udo",
+                "lastName": "Schneider",
+                "phone": null,
+                "streetAndNo": "Königstraße 63",
+                "title": "Dr.",
+                "url": null,
+                "zip": "14109"
+            },
+            "idContactIdType": {
+                "type": "COLLABORATOR_OTHER_ADDRESS"
+            },
+            "otherType": "OTHER_PRINCIPAL_COORDINATING_INVESTIGATOR"
+        }
+    ],
+    "trialDescriptions": [
+        {
+            "acronym": null,
+            "idLocale": {
+                "locale": "de"
+            },
+            "scientificSummary": "Osteoporose zählt laut WHO zu den zehn wichtigsten Volkskrankheiten, mit weltweit und in Deutschland steigenden Frakturzahlen. Neben Alter, weiblichem Geschlecht und vorausgegangenen Frakturen spielen auch häufige Risikofaktoren wie systemische Inflammation, Glukokortikoidtherapie, Diabetes mellitus und Rauchen eine Rolle. Trotz verfügbarer wirksamer Therapien ist bei jeder Osteoporose-Diagnose der Ausschluss sekundärer Ursachen essenziell. Neben häufigen sekundären Ursachen existieren auch seltene osteologische Erkrankungen.\r\n\r\nDiese Studie fokussiert auf drei seltene Entitäten: schwangerschafts- und stillzeitassoziierte Osteoporose, Osteoporose bei Mastozytose und die Methotrexat-induzierte Osteopathie. Die schwangerschaftsassoziierte Osteoporose ist selten, aber schwerwiegend, tritt meist peri- oder postpartal auf und geht häufig mit multiplen Wirbelkörperfrakturen einher. Daten zu Risikofaktoren fehlen, die Evidenz basiert überwiegend auf Fallberichten.\r\n\r\nMastozytose ist eine seltene Erkrankung mit klonaler Mastzellvermehrung, die systemisch verlaufen kann und mit Osteoporose assoziiert ist; insbesondere zur rein ossären Beteiligung liegen nur wenige Daten vor.\r\n\r\nDie Methotrexat-induzierte Osteopathie ist eine seltene, oft übersehene Nebenwirkung einer Langzeit-MTX-Therapie und manifestiert sich typischerweise durch atraumatische Stressfrakturen der unteren Extremitäten. Risikofaktoren und pathophysiologische Mechanismen sind unzureichend verstanden.\r\n\r\nZiel der Studie ist es, bekannte Osteoporose-Risikofaktoren in diesen speziellen Patientenkohorten deskriptiv zu erfassen und Patientencharakteristika zusammenzufassen. Ein Vergleich mit Kontrollgruppen oder zwischen den Erkrankungen ist nicht vorgesehen. Durch die Auswertung vergleichsweise großer Fallserien soll die Aufmerksamkeit für seltene osteologische Erkrankungen erhöht und die begrenzte Datenlage zur Diagnostik und Therapie ergänzt werden.",
+            "summary": "In Berlin ist die Versorgung von Patient*innen mit seltenen osteologischen Erkrankungen vergleichsweise gut. Mit der Abteilung für Osteologie im Immanuel Krankenhaus Wannsee steht der Berliner Bevölkerung sogar eine stationäre Abteilung für Osteologie zur Verfügung. Auch ambulante Patient*innen werden gesehen. Im Endokrinologikum Berlin finden Patient*innen mit seltenen osteologischen Erkrankungen ebenfalls ambulante Betreuung. Beide Zentren sind DVO zertifizierte osteologische Schwerpunktzentren. Daher finden wir in beiden Zentren zahlreiche dokumentierte Fälle verschiedener auch seltener osteologischer Erkrankungen wie der Schwangerschaft- und Stillzeit-assoziierten Osteoporose, Osteoporose bei Mastozytose und die Methotrexat-induzierte Osteopathie. Wir möchten im Rahmen dieser Studie die Patienten/Krankheitsmerkmale von seltenen osteologischen Erkrankungen zusammenfassen. Oft basiert die publizierte Literatur auf Fallberichten oder kleinen Fallserien. Wir planen eine retrospektive Charakterisierung der Patientendaten. Dabei sollen demographische Daten erfasst werden, falls verfügbar, Bildgebungsdaten (Beschreibung der Fraktur), histologische Untersuchungen (Knochenhistologie), Osteodensitometrien, Laborwerte, Krankheitsvorgeschichte (Vorerkrankungen, Medikation).",
+            "title": "Retrospektive Charakterisierung von Patient*innen mit seltenen osteologischen Erkrankungen"
+        },
+        {
+            "acronym": null,
+            "idLocale": {
+                "locale": "en"
+            },
+            "scientificSummary": "Osteoporosis is classified by the WHO as one of the ten most important non-communicable diseases, with increasing numbers of osteoporotic fractures worldwide and in Germany. In addition to age, female sex, and prior fragility fractures, common risk factors include systemic inflammation, glucocorticoid use, diabetes mellitus, and smoking. Despite effective therapies, exclusion of secondary causes is essential in every diagnosis of osteoporosis, including rare osteological disorders.\r\n\r\nThis study focuses on three rare entities: pregnancy- and lactation-associated osteoporosis, osteoporosis associated with mastocytosis, and methotrexate-induced osteopathy. Pregnancy- and lactation-associated osteoporosis is rare but severe, typically occurring peri- or postpartum and often presenting with multiple vertebral fractures. Data on risk factors are scarce and mainly derived from case reports.\r\n\r\nMastocytosis is a rare clonal mast cell disorder that may involve the skeleton and be associated with osteoporosis; however, data on purely osseous manifestations are limited.\r\n\r\nMethotrexate-induced osteopathy is a rare and frequently underrecognized adverse effect of long-term methotrexate therapy, typically manifesting as atraumatic stress fractures of the lower extremities. Risk factors and underlying mechanisms remain poorly understood.\r\n\r\nThe aim of this study is to descriptively assess established osteoporosis risk factors and patient characteristics within these specific cohorts. No comparisons with control groups or between the diseases are planned. By analyzing relatively large case series, this study seeks to raise awareness of rare osteological diseases and to complement the limited evidence base regarding their diagnosis and treatment.",
+            "summary": "In Berlin, the care of patients with rare osteological diseases is comparatively well established. With the Department of Osteology at Immanuel Hospital Wannsee, the population of Berlin even has access to an inpatient osteology unit. Outpatient care is also provided. At Endokrinologikum Berlin, patients with rare osteological diseases likewise receive outpatient treatment. Both centers are DVO-certified osteological centers of excellence. Consequently, both centers have a large number of documented cases of various, including rare, osteological diseases, such as pregnancy- and lactation-associated osteoporosis, osteoporosis associated with mastocytosis, and methotrexate-induced osteopathy. Within the framework of this study, we aim to summarize patient and disease characteristics of rare osteological disorders. The published literature is often based on case reports or small case series. We therefore plan a retrospective characterization of patient data. This will include the collection of demographic data, imaging data (characterization of fractures), histological investigations (bone histology), osteodensitometry, laboratory parameters, and medical history (comorbidities and medication), where available.",
+            "title": "Retrospective characterization of patients with rare osteological diseases"
+        }
+    ],
+    "trialResults": {
+        "firstPublication": null,
+        "firstResultPublication": null,
+        "ipdSharingPlan": false,
+        "plannedPublication": null,
+        "publications": [
+            {
+                "description": "Studienprotokoll wie bei der Ethikkommission eingereicht ohne Namen",
+                "document": null,
+                "link": null,
+                "type": "TRIALPROTOCOL"
+            }
+        ],
+        "relatedDrksTrials": [
+        ],
+        "trialResultsDescriptions": [
+            {
+                "briefSummaryOfResultsDescription": null,
+                "idLocale": {
+                    "locale": "de"
+                },
+                "ipdSharingPlanDescription": null
+            },
+            {
+                "briefSummaryOfResultsDescription": null,
+                "idLocale": {
+                    "locale": "en"
+                },
+                "ipdSharingPlanDescription": null
+            }
+        ]
+    },
+    "trialStatus": "REGISTERED",
+    "url": null
+}

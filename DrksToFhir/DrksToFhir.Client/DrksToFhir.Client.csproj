@@ -11,4 +11,10 @@
     <ProjectReference Include="..\DrksToFhir.Core\DrksToFhir.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="DRKS_trial-DRKS00038775.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
