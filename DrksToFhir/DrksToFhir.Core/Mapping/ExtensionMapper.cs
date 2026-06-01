@@ -57,7 +57,9 @@ internal static class ExtensionMapper
 
                 if (vote.Type is not null)
                     ecExt.Extension.Add(new Extension("type",
-                        new Code(vote.Type.ToString())));
+                        new Coding(
+                            "https://www.imise.uni-leipzig.de/fhir/CodeSystem/ContactType",
+                            vote.Type.ToString())));
             }
         }
 
