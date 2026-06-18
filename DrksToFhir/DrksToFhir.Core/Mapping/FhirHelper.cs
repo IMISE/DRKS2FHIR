@@ -76,12 +76,12 @@ internal static class FhirHelper
 
     internal static (string unit, string code) MapAgeUnit(AgeUnit unit) => unit switch
     {
-        AgeUnit.DAYS => ("days", "d"),
-        AgeUnit.WEEKS => ("weeks", "wk"),
-        AgeUnit.MONTHS => ("months", "mo"),
-        AgeUnit.YEARS => ("years", "a"),
-        AgeUnit.WEEK_OF_PREGNANCY => ("weeks of pregnancy", "wk"),
-        _ => ("years", "a")
+        AgeUnit.DAYS => ("d", "d"),
+        AgeUnit.WEEKS => ("wk", "wk"),
+        AgeUnit.MONTHS => ("mo", "mo"),
+        AgeUnit.YEARS => ("a", "a"),
+        AgeUnit.WEEK_OF_PREGNANCY => ("weeks-of-pregnancy", "weeks-of-pregnancy"),
+        _ => ("a", "a")
     };
 
     internal static Organization BuildOrganization(string id, DrksContact? contact)

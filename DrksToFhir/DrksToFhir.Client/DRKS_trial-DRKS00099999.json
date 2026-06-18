@@ -1,0 +1,421 @@
+{
+    "drksId": "DRKS00099999",
+    "ethicsCommittee": {
+        "applicationDate": "2023-10-05",
+        "ethicVotes": [
+            {
+                "contact": {
+                    "affiliation": "Ethik-Kommission der Charité – Universitätsmedizin Berlin",
+                    "city": "Berlin",
+                    "country": "DE",
+                    "email": "ethikkommission@charite.de",
+                    "fax": "+493084454311",
+                    "firstName": null,
+                    "lastName": null,
+                    "phone": "+493084454310",
+                    "streetAndNo": "Charitéplatz 1",
+                    "title": null,
+                    "url": "https://ethikkommission.charite.de",
+                    "zip": "10117"
+                },
+                "dateOfVote": "2023-11-28",
+                "type": "ETHICS_COMMITTEE",
+                "vote": "APPROVED"
+            }
+        ],
+        "number": "EA1/234/23"
+    },
+    "lastUpdate": "2024-06-01",
+    "materialSupports": [
+        {
+            "contact": {
+                "affiliation": "Bundesministerium für Bildung und Forschung",
+                "city": "Berlin",
+                "country": "DE",
+                "email": null,
+                "fax": null,
+                "firstName": null,
+                "lastName": null,
+                "phone": null,
+                "streetAndNo": "Kapelle-Ufer 1",
+                "title": null,
+                "url": "https://www.bmbf.de",
+                "zip": "10117"
+            },
+            "type": "PUBLIC_FUNDING"
+        },
+        {
+            "contact": {
+                "affiliation": "Amgen GmbH",
+                "city": "München",
+                "country": "DE",
+                "email": null,
+                "fax": null,
+                "firstName": null,
+                "lastName": null,
+                "phone": null,
+                "streetAndNo": "Riesstraße 25",
+                "title": null,
+                "url": "https://www.amgen.de",
+                "zip": "80992"
+            },
+            "type": "COMMERCIAL"
+        }
+    ],
+    "observationalGroups": [
+        {
+            "comment": "Interventionsarm: Denosumab 60 mg subkutan alle 6 Monate (Monat 0, 6, 12, 18) plus jährliche Placebo-Infusion i.v.",
+            "idArm": {
+                "arm": 1,
+                "locale": "de"
+            }
+        },
+        {
+            "comment": "Intervention arm: Denosumab 60 mg subcutaneously every 6 months (months 0, 6, 12, 18) plus annual placebo infusion i.v.",
+            "idArm": {
+                "arm": 1,
+                "locale": "en"
+            }
+        },
+        {
+            "comment": "Kontrollarm: Zoledronsäure 5 mg i.v. einmal jährlich (Monat 0 und 12) plus Placebo-Injektion s.c. alle 6 Monate.",
+            "idArm": {
+                "arm": 2,
+                "locale": "de"
+            }
+        },
+        {
+            "comment": "Control arm: Zoledronic acid 5 mg i.v. once yearly (months 0 and 12) plus placebo injection s.c. every 6 months.",
+            "idArm": {
+                "arm": 2,
+                "locale": "en"
+            }
+        }
+    ],
+    "otherSecondaryIds": [
+        {
+            "value": "BMBF-01KG2401"
+        }
+    ],
+    "recruitment": {
+        "actualCompletionDate": null,
+        "actualStartDate": null,
+        "centricType": "MULTICENTRIC",
+        "countries": [
+            {
+                "country": "DE"
+            },
+            {
+                "country": "AT"
+            }
+        ],
+        "gender": "FEMALE",
+        "healthyVolunteers": false,
+        "institutes": [
+            {
+                "city": "Berlin",
+                "name": "Charité – Universitätsmedizin Berlin, Centrum für Muskuloskeletale Chirurgie",
+                "type": "UNI_MEDICAL_CENTER"
+            },
+            {
+                "city": "Hamburg",
+                "name": "Universitätsklinikum Hamburg-Eppendorf, Endokrinologie",
+                "type": "UNI_MEDICAL_CENTER"
+            },
+            {
+                "city": "Freiburg",
+                "name": "Universitätsklinikum Freiburg, Innere Medizin II",
+                "type": "UNI_MEDICAL_CENTER"
+            },
+            {
+                "city": "Wien",
+                "name": "Medizinische Universität Wien, Universitätsklinik für Innere Medizin III",
+                "type": "UNI_MEDICAL_CENTER"
+            }
+        ],
+        "maximumAge": {
+            "unit": "YEARS",
+            "value": 80
+        },
+        "minimumAge": {
+            "unit": "YEARS",
+            "value": 55
+        },
+        "plannedParticipants": 320,
+        "recruitmentDescriptions": [
+            {
+                "exclusionCriteria": "Vorbehandlung mit einem RANK-Ligand-Inhibitor; i.v. Bisphosphonat-Therapie in den letzten 3 Jahren; orales Bisphosphonat > 3 Jahre kumulativ; Kreatinin-Clearance < 35 ml/min; Hypokalzämie (Serumcalcium < 2,0 mmol/l); aktive maligne Erkrankung; bekannte Überempfindlichkeit gegen Studienmedikamente.",
+                "idLocale": {
+                    "locale": "de"
+                },
+                "inclusionCriteria": "Postmenopausale Frauen (≥ 12 Monate Amenorrhoe); Alter 55–80 Jahre; DXA T-Score ≤ -2,5 an LWS oder Gesamthüfte; mindestens eine prävalente morphometrische Wirbelkörperfraktur (Genant Grad ≥ 1); schriftliche Einwilligung.",
+                "reasonForStatusDescription": null
+            },
+            {
+                "exclusionCriteria": "Prior treatment with a RANK-ligand inhibitor; i.v. bisphosphonate therapy within the past 3 years; oral bisphosphonate > 3 years cumulative; creatinine clearance < 35 ml/min; hypocalcaemia (serum calcium < 2.0 mmol/l); active malignancy; known hypersensitivity to study medications.",
+                "idLocale": {
+                    "locale": "en"
+                },
+                "inclusionCriteria": "Postmenopausal women (≥ 12 months amenorrhoea); age 55–80 years; DXA T-score ≤ -2.5 at lumbar spine or total hip; at least one prevalent morphometric vertebral fracture (Genant grade ≥ 1); written informed consent.",
+                "reasonForStatusDescription": null
+            }
+        ],
+        "scheduledCompletionDate": "2027-03-31",
+        "scheduledStartDate": "2024-04-01",
+        "status": "PENDING",
+        "totalParticipants": null
+    },
+    "registrationDrks": "2024-01-15",
+    "registrationType": "PROSPECTIVE",
+    "secondaryIds": {
+        "eudamedNumber": null,
+        "eudraCtNumber": "2023-004521-18",
+        "noOtherIdentificationNumbersAvailable": false,
+        "otherPrimaryRegisterId": "NCT06123456",
+        "otherPrimaryRegisterName": "ClinicalTrials.gov",
+        "universalTrialNumber": "U1111-1298-4567"
+    },
+    "sponsored": true,
+    "studiedHealthConditions": [
+        {
+            "catalog": "ICD10",
+            "code": "M80.0",
+            "studiedHealthConditionDescriptions": [
+                {
+                    "comment": "Postmenopausale Osteoporose mit pathologischer Fraktur",
+                    "idLocale": {
+                        "locale": "de"
+                    }
+                },
+                {
+                    "comment": "Postmenopausal osteoporosis with pathological fracture",
+                    "idLocale": {
+                        "locale": "en"
+                    }
+                }
+            ],
+            "type": "MAIN"
+        },
+        {
+            "catalog": "ICD10",
+            "code": "M81.0",
+            "studiedHealthConditionDescriptions": [
+                {
+                    "comment": "Postmenopausale Osteoporose ohne pathologische Fraktur",
+                    "idLocale": {
+                        "locale": "de"
+                    }
+                },
+                {
+                    "comment": "Postmenopausal osteoporosis without pathological fracture",
+                    "idLocale": {
+                        "locale": "en"
+                    }
+                }
+            ],
+            "type": "OTHER"
+        }
+    ],
+    "studyCharacteristic": {
+        "allocation": "RANDOMIZED_CONTROLLED_TRIAL",
+        "assignment": "PARALLEL",
+        "blindingType": "BLINDED",
+        "blindingWhoList": [
+            {
+                "idBlindingWho": {
+                    "blindingWho": "PATIENT_SUBJECT"
+                }
+            },
+            {
+                "idBlindingWho": {
+                    "blindingWho": "INVESTIGATOR_THERAPIST"
+                }
+            },
+            {
+                "idBlindingWho": {
+                    "blindingWho": "ASSESSOR"
+                }
+            }
+        ],
+        "characteristicDescriptions": [
+            {
+                "idLocale": {
+                    "locale": "de"
+                },
+                "primaryOutcome": "Inzidenz neuer morphometrischer Wirbelkörperfrakturen nach 24 Monaten, beurteilt mittels Röntgenaufnahmen der Brust- und Lendenwirbelsäule (Genant-Klassifikation, Grad ≥ 1).",
+                "secondaryOutcome": "Veränderung der Knochenmineraldichte (BMD) an LWS, Gesamthüfte und Schenkelhals (DXA) nach 12 und 24 Monaten; Serum-CTX und PINP nach 3, 6, 12 und 24 Monaten; Inzidenz nicht-vertebraler Frakturen; unerwünschte Ereignisse gemäß CTCAE v5.0.",
+                "typeOfHiddenAllocation": "Zentrale Randomisierung über ein webbasiertes IVRS-System (Interactive Voice Response System); Zuteilung erst nach vollständiger Baseline-Dokumentation freigegeben.",
+                "typeOfSequenceGeneration": "Computergenerierte Randomisierungsliste, erstellt durch unabhängiges Biometrie-Zentrum (permutierte Blöcke, Blockgröße 4, stratifiziert nach Zentrum und T-Score ≤ -3,0 vs. > -3,0)."
+            },
+            {
+                "idLocale": {
+                    "locale": "en"
+                },
+                "primaryOutcome": "Incidence of new morphometric vertebral fractures at 24 months, assessed by thoracic and lumbar spine radiographs (Genant classification, grade ≥ 1).",
+                "secondaryOutcome": "Change in bone mineral density (BMD) at lumbar spine, total hip and femoral neck (DXA) at 12 and 24 months; serum CTX and PINP at 3, 6, 12 and 24 months; incidence of non-vertebral fractures; adverse events per CTCAE v5.0.",
+                "typeOfHiddenAllocation": "Central randomisation via a web-based IVRS (Interactive Voice Response System); allocation released only after complete baseline documentation.",
+                "typeOfSequenceGeneration": "Computer-generated randomisation list produced by an independent biostatistics centre (permuted blocks, block size 4, stratified by centre and T-score ≤ -3.0 vs > -3.0)."
+            }
+        ],
+        "controlTypes": [
+            {
+                "idControlType": {
+                    "controlType": "ACTIVE_CONTROL"
+                }
+            }
+        ],
+        "duration": "LONGITUDINAL",
+        "phase": "PHASE_III",
+        "purpose": "TREATMENT",
+        "timing": "PROSPECTIVE",
+        "type": "INTERVENTIONAL"
+    },
+    "trialContacts": [
+        {
+            "contact": {
+                "affiliation": "Charité – Universitätsmedizin Berlin",
+                "city": "Berlin",
+                "country": "DE",
+                "email": "sponsoring@charite.de",
+                "fax": null,
+                "firstName": null,
+                "lastName": null,
+                "phone": "+4930450570",
+                "streetAndNo": "Charitéplatz 1",
+                "title": null,
+                "url": "https://www.charite.de",
+                "zip": "10117"
+            },
+            "idContactIdType": {
+                "type": "PRIMARY_SPONSOR"
+            },
+            "otherType": null
+        },
+        {
+            "contact": {
+                "affiliation": "Bundesministerium für Bildung und Forschung (BMBF)",
+                "city": "Berlin",
+                "country": "DE",
+                "email": "info@bmbf.de",
+                "fax": null,
+                "firstName": null,
+                "lastName": null,
+                "phone": "+4930185700",
+                "streetAndNo": "Kapelle-Ufer 1",
+                "title": null,
+                "url": "https://www.bmbf.de",
+                "zip": "10117"
+            },
+            "idContactIdType": {
+                "type": "SECONDARY_SPONSOR"
+            },
+            "otherType": null
+        },
+        {
+            "contact": {
+                "affiliation": "Charité – Universitätsmedizin Berlin, Centrum für Muskuloskeletale Chirurgie",
+                "city": "Berlin",
+                "country": "DE",
+                "email": "max.mustermann@charite.de",
+                "fax": null,
+                "firstName": "Max",
+                "lastName": "Mustermann",
+                "phone": "+4930450559001",
+                "streetAndNo": "Augustenburger Platz 1",
+                "title": "Prof. Dr. med.",
+                "url": "https://cmsc.charite.de",
+                "zip": "13353"
+            },
+            "idContactIdType": {
+                "type": "PRINCIPAL_COORDINATING_INVESTIGATOR"
+            },
+            "otherType": null
+        },
+        {
+            "contact": {
+                "affiliation": "Charité – Universitätsmedizin Berlin",
+                "city": "Berlin",
+                "country": "DE",
+                "email": "bone-rct@charite.de",
+                "fax": null,
+                "firstName": "Erika",
+                "lastName": "Musterfrau",
+                "phone": "+4930450559002",
+                "streetAndNo": "Augustenburger Platz 1",
+                "title": "Dr. med.",
+                "url": null,
+                "zip": "13353"
+            },
+            "idContactIdType": {
+                "type": "SCIENTIFIC_QUERIES"
+            },
+            "otherType": null
+        },
+        {
+            "contact": {
+                "affiliation": "Charité – Universitätsmedizin Berlin, Studienzentrale",
+                "city": "Berlin",
+                "country": "DE",
+                "email": "bone-rct-info@charite.de",
+                "fax": null,
+                "firstName": "Anna",
+                "lastName": "Schmidt",
+                "phone": "+4930450559003",
+                "streetAndNo": "Augustenburger Platz 1",
+                "title": null,
+                "url": null,
+                "zip": "13353"
+            },
+            "idContactIdType": {
+                "type": "PUBLIC_QUERIES"
+            },
+            "otherType": null
+        }
+    ],
+    "trialDescriptions": [
+        {
+            "acronym": "BONE-RCT",
+            "idLocale": {
+                "locale": "de"
+            },
+            "scientificSummary": "Postmenopausale Osteoporose ist mit einer hohen Frakturlast assoziiert. Antiresorptive Therapien wie Bisphosphonate (Zoledronsäure) und RANK-Ligand-Inhibitoren (Denosumab) sind etabliert, ein direkter Kopf-an-Kopf-Vergleich fehlt jedoch bei Patientinnen mit sehr hohem Frakturrisiko (T-Score ≤ -2,5 und ≥ 1 vertebrale Prävalenzfraktur). Diese doppelblinde, randomisierte Phase-III-Studie vergleicht Denosumab 60 mg s.c. alle 6 Monate versus Zoledronsäure 5 mg i.v. einmal jährlich über 24 Monate. Primärer Endpunkt ist die Inzidenz neuer morphometrischer Wirbelkörperfrakturen. Sekundäre Endpunkte umfassen Veränderungen der Knochenmineraldichte (DXA), Marker des Knochenumbaus sowie Sicherheitsparameter.",
+            "summary": "Diese Phase-III-Studie untersucht die Überlegenheit von Denosumab gegenüber Zoledronsäure in der Reduktion vertebraler Frakturen bei postmenopausalen Frauen mit hohem Frakturrisiko. Patientinnen werden 1:1 randomisiert und doppelblind über 24 Monate behandelt.",
+            "title": "Randomisierte kontrollierte Studie zur Wirksamkeit von Denosumab versus Zoledronsäure bei postmenopausaler Osteoporose mit hohem Frakturrisiko"
+        },
+        {
+            "acronym": "BONE-RCT",
+            "idLocale": {
+                "locale": "en"
+            },
+            "scientificSummary": "Postmenopausal osteoporosis is associated with a high fracture burden. Antiresorptive therapies such as bisphosphonates (zoledronic acid) and RANK-ligand inhibitors (denosumab) are established, but a direct head-to-head comparison is lacking in patients with very high fracture risk (T-score ≤ -2.5 and ≥ 1 prevalent vertebral fracture). This double-blind, randomised phase III trial compares denosumab 60 mg s.c. every 6 months versus zoledronic acid 5 mg i.v. once yearly over 24 months. The primary endpoint is the incidence of new morphometric vertebral fractures. Secondary endpoints include changes in bone mineral density (DXA), bone turnover markers, and safety parameters.",
+            "summary": "This phase III trial investigates the superiority of denosumab over zoledronic acid in reducing vertebral fractures in postmenopausal women at high fracture risk. Patients are randomised 1:1 and treated double-blind over 24 months.",
+            "title": "Randomised controlled trial of denosumab versus zoledronic acid in postmenopausal osteoporosis at high fracture risk"
+        }
+    ],
+    "trialResults": {
+        "firstPublication": null,
+        "firstResultPublication": null,
+        "ipdSharingPlan": true,
+        "plannedPublication": "2027-09-30",
+        "publications": [
+        ],
+        "relatedDrksTrials": [
+        ],
+        "trialResultsDescriptions": [
+            {
+                "briefSummaryOfResultsDescription": null,
+                "idLocale": {
+                    "locale": "de"
+                }
+            },
+            {
+                "briefSummaryOfResultsDescription": null,
+                "idLocale": {
+                    "locale": "en"
+                }
+            }
+        ]
+    },
+    "trialStatus": "REGISTERED",
+    "url": "https://drks.de/search/de/trial/DRKS00099999"
+}

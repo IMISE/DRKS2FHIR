@@ -1,13 +1,16 @@
 ﻿using DrksToFhir.Core.Mapping;
 using Hl7.Fhir.Serialization;
 
-if (args.Length < 1)
+if (args.Length < 2)
 {
-    Console.Error.WriteLine("Verwendung: DrksToFhir.Cli <pfad-zur-drks-json> [pfad-zur-ausgabe-json]");
+    Console.Error.WriteLine("Verwendung:");
+    Console.Error.WriteLine("  Export: DrksToFhir.Client drks <pfad-zur-drks-json> [pfad-zur-ausgabe-json]");
+    Console.Error.WriteLine("  Import: DrksToFhir.Client fhir <pfad-zur-fhir-json> [pfad-zur-ausgabe-json]");
     return 1;
 }
 
-var inputPath = args[0];
+var mode = args[0].ToLowerInvariant();
+var inputPath = args[1];
 
 if (!File.Exists(inputPath))
 {
@@ -17,23 +20,36 @@ if (!File.Exists(inputPath))
 
 try
 {
-    var drksJson = await File.ReadAllTextAsync(inputPath);
+    var inputJson = await File.ReadAllTextAsync(inputPath);
+    string outputJson;
 
-    var mapper = new ResearchStudyMapper();
-    var researchStudy = mapper.Map(drksJson);
-
-    var serializer = new FhirJsonSerializer();
-    var fhirJson = serializer.SerializeToString(researchStudy);
-
-    if (args.Length >= 2)
+    if (mode == "drks")
     {
-        var outputPath = args[1];
-        await File.WriteAllTextAsync(outputPath, fhirJson);
-        Console.WriteLine($"FHIR-JSON gespeichert: {outputPath}");
+        var mapper = new ResearchStudyMapper();
+        var researchStudy = mapper.Map(inputJson);
+        var serializer = new FhirJsonSerializer();
+        outputJson = serializer.SerializeToString(researchStudy);
+    }
+    else if (mode == "fhir")
+    {
+        var mapper = new FhirToDrksMapper();
+        outputJson = mapper.Map(inputJson);
     }
     else
     {
-        Console.WriteLine(fhirJson);
+        Console.Error.WriteLine($"Unbekannter Modus: '{mode}'. Verwende 'drks' oder 'fhir'.");
+        return 1;
+    }
+
+    if (args.Length >= 3)
+    {
+        var outputPath = args[2];
+        await File.WriteAllTextAsync(outputPath, outputJson);
+        Console.WriteLine($"Ausgabe gespeichert: {outputPath}");
+    }
+    else
+    {
+        Console.WriteLine(outputJson);
     }
 
     return 0;

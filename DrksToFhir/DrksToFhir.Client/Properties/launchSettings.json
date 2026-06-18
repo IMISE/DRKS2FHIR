@@ -2,7 +2,7 @@
   "profiles": {
     "DrksToFhir.Client": {
       "commandName": "Project",
-      "commandLineArgs": "DRKS_trial-DRKS00038775.json output.json"
+      "commandLineArgs": "fhir DRKS00038775_FHIR.json DRKS00038775_zurueck.json"
     }
   }
 }
