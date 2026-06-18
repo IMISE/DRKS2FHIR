@@ -15,8 +15,7 @@ public class ResearchStudyMapper
 
     public ResearchStudy Map(string drksJson)
     {
-        var drks = JsonSerializer.Deserialize<DrksStudy>(drksJson, JsonOptions)
-            ?? throw new ArgumentException("DRKS-JSON konnte nicht deserialisiert werden.");
+        var drks = JsonSerializer.Deserialize<DrksStudy>(drksJson, JsonOptions) ?? throw new ArgumentException("DRKS-JSON konnte nicht deserialisiert werden.");
 
         return Map(drks);
     }

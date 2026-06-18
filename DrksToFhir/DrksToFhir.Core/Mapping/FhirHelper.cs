@@ -9,16 +9,20 @@ internal static class FhirHelper
     internal static FhirString BuildTranslatedString(string? enText, string? deText)
     {
         var element = new FhirString(enText);
-        if (deText is not null)
+        if (deText != null)
+        {
             AddTranslationExtension(element, "de", deText);
+        }            
         return element;
     }
 
     internal static Markdown BuildTranslatedMarkdown(string? enText, string? deText)
     {
         var element = new Markdown(enText);
-        if (deText is not null)
+        if (deText != null)
+        {
             AddTranslationExtension(element, "de", deText);
+        }
         return element;
     }
 
@@ -36,11 +40,14 @@ internal static class FhirHelper
     internal static Group.CharacteristicComponent? BuildAgeCharacteristic(
         AgeDto? min, AgeDto? max)
     {
-        if (min is null && max is null) return null;
+        if (min == null && max == null)
+        {
+            return null;
+        }
 
         var range = new Hl7.Fhir.Model.Range();
 
-        if (min?.Unit is not null && min.Unit != AgeUnit.NO_MIN_AGE)
+        if (min?.Unit != null && min.Unit != AgeUnit.NO_MIN_AGE)
         {
             var (unit, code) = MapAgeUnit(min.Unit.Value);
             range.Low = new Quantity
@@ -52,7 +59,7 @@ internal static class FhirHelper
             };
         }
 
-        if (max?.Unit is not null && max.Unit != AgeUnit.NO_MAX_AGE)
+        if (max?.Unit != null && max.Unit != AgeUnit.NO_MAX_AGE)
         {
             var (unit, code) = MapAgeUnit(max.Unit.Value);
             range.High = new Quantity
@@ -64,7 +71,10 @@ internal static class FhirHelper
             };
         }
 
-        if (range.Low is null && range.High is null) return null;
+        if (range.Low == null && range.High == null)
+        {
+            return null;
+        }
 
         return new Group.CharacteristicComponent
         {
@@ -87,38 +97,47 @@ internal static class FhirHelper
     internal static Organization BuildOrganization(string id, DrksContact? contact)
     {
         var org = new Organization { Id = id };
-        if (contact is null) return org;
+        if (contact == null)
+        {
+            return org;
+        }
 
         org.Name = contact.Affiliation;
 
         var extContact = new ExtendedContactDetail();
         bool hasContact = false;
 
-        // Name
-        if (contact.FirstName is not null || contact.LastName is not null)
+        if (contact.FirstName != null || contact.LastName != null)
         {
             extContact.Name =
             [
                 new HumanName
             {
                 Family = contact.LastName,
-                Given = contact.FirstName is not null ? [contact.FirstName] : null,
-                Prefix = contact.Title is not null ? [contact.Title] : null
+                Given = contact.FirstName != null ? [contact.FirstName] : null,
+                Prefix = contact.Title != null ? [contact.Title] : null
             }
             ];
             hasContact = true;
         }
 
-        // Telecom
         var telecoms = new List<ContactPoint>();
-        if (contact.Email is not null)
+        if (contact.Email != null)
+        {
             telecoms.Add(new ContactPoint { System = ContactPoint.ContactPointSystem.Email, Value = contact.Email });
-        if (contact.Phone is not null)
+        }            
+        if (contact.Phone != null)
+        {
             telecoms.Add(new ContactPoint { System = ContactPoint.ContactPointSystem.Phone, Value = contact.Phone });
-        if (contact.Fax is not null)
+        }            
+        if (contact.Fax != null)
+        {
             telecoms.Add(new ContactPoint { System = ContactPoint.ContactPointSystem.Fax, Value = contact.Fax });
-        if (contact.Url is not null)
+        }            
+        if (contact.Url != null)
+        {
             telecoms.Add(new ContactPoint { System = ContactPoint.ContactPointSystem.Url, Value = contact.Url });
+        }            
 
         if (telecoms.Count > 0)
         {
@@ -126,13 +145,11 @@ internal static class FhirHelper
             hasContact = true;
         }
 
-        // Adresse
-        if (contact.StreetAndNo is not null || contact.City is not null ||
-            contact.Zip is not null || contact.Country is not null)
+        if (contact.StreetAndNo != null || contact.City != null || contact.Zip != null || contact.Country != null)
         {
             extContact.Address = new Address
             {
-                Line = contact.StreetAndNo is not null ? [contact.StreetAndNo] : null,
+                Line = contact.StreetAndNo != null ? [contact.StreetAndNo] : null,
                 City = contact.City,
                 PostalCode = contact.Zip,
                 Country = contact.Country
@@ -141,7 +158,9 @@ internal static class FhirHelper
         }
 
         if (hasContact)
+        {
             org.Contact = [extContact];
+        }            
 
         return org;
     }
