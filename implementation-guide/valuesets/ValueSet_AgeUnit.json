@@ -1,0 +1,27 @@
+{
+  "resourceType": "ValueSet",
+  "id": "AgeUnit",
+  "url": "https://www.imise.uni-leipzig.de/fhir/ValueSet/AgeUnit",
+  "version": "1.0.0",
+  "name": "AgeUnit",
+  "title": "Age Unit",
+  "status": "active",
+  "experimental": true,
+  "description": "Age unit codes for eligibility criteria in DRKS-registered studies, combining standard UCUM units with DRKS-specific extensions.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://unitsofmeasure.org",
+        "concept": [
+          { "code": "d", "display": "Days" },
+          { "code": "wk", "display": "Weeks" },
+          { "code": "mo", "display": "Months" },
+          { "code": "a", "display": "Years" }
+        ]
+      },
+      {
+        "system": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/AgeUnit"
+      }
+    ]
+  }
+}
