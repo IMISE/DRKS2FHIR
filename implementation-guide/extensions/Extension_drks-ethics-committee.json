@@ -1,0 +1,215 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "drks-ethics-committee",
+    "url": "https://www.imise.uni-leipzig.de/fhir/StructureDefinition/drks-ethics-committee",
+    "version": "1.0.0",
+    "name": "DRKSEthicsCommittee",
+    "title": "DRKS Ethics Committee",
+    "status": "active",
+    "experimental": true,
+    "description": "Ethics committee metadata for a DRKS study, including the application date, committee reference number, vote result, date of vote, and contact type.",
+    "fhirVersion": "5.0.0",
+    "kind": "complex-type",
+    "abstract": false,
+    "context": [
+        {
+            "type": "element",
+            "expression": "ResearchStudy"
+        }
+    ],
+    "type": "Extension",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Extension",
+                "path": "Extension",
+                "short": "DRKS ethics committee metadata",
+                "definition": "Groups ethics committee metadata."
+            },
+            {
+                "id": "Extension.extension",
+                "path": "Extension.extension",
+                "slicing": {
+                    "discriminator": [
+                        {
+                            "type": "value",
+                            "path": "url"
+                        }
+                    ],
+                    "rules": "open"
+                }
+            },
+            {
+                "id": "Extension.extension:applicationDate",
+                "path": "Extension.extension",
+                "sliceName": "applicationDate",
+                "short": "Date of ethics committee application",
+                "definition": "The date on which the ethics committee application was submitted.",
+                "min": 0,
+                "max": "1"
+            },
+            {
+                "id": "Extension.extension:applicationDate.extension",
+                "path": "Extension.extension.extension",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "id": "Extension.extension:applicationDate.url",
+                "path": "Extension.extension.url",
+                "fixedUri": "applicationDate"
+            },
+            {
+                "id": "Extension.extension:applicationDate.valueDate",
+                "path": "Extension.extension.valueDate",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "date"
+                    }
+                ]
+            },
+            {
+                "id": "Extension.extension:number",
+                "path": "Extension.extension",
+                "sliceName": "number",
+                "short": "Ethics committee reference number",
+                "definition": "The reference number assigned by the ethics committee.",
+                "min": 0,
+                "max": "1"
+            },
+            {
+                "id": "Extension.extension:number.extension",
+                "path": "Extension.extension.extension",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "id": "Extension.extension:number.url",
+                "path": "Extension.extension.url",
+                "fixedUri": "number"
+            },
+            {
+                "id": "Extension.extension:number.valueString",
+                "path": "Extension.extension.valueString",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ]
+            },
+            {
+                "id": "Extension.extension:vote",
+                "path": "Extension.extension",
+                "sliceName": "vote",
+                "short": "Ethics committee vote result",
+                "definition": "The result of the ethics committee review.",
+                "min": 0,
+                "max": "1"
+            },
+            {
+                "id": "Extension.extension:vote.extension",
+                "path": "Extension.extension.extension",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "id": "Extension.extension:vote.url",
+                "path": "Extension.extension.url",
+                "fixedUri": "vote"
+            },
+            {
+                "id": "Extension.extension:vote.valueCoding",
+                "path": "Extension.extension.valueCoding",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "Coding"
+                    }
+                ],
+                "binding": {
+                    "strength": "required",
+                    "valueSet": "https://www.imise.uni-leipzig.de/fhir/ValueSet/EthicVote"
+                }
+            },
+            {
+                "id": "Extension.extension:dateOfVote",
+                "path": "Extension.extension",
+                "sliceName": "dateOfVote",
+                "short": "Date of the ethics committee vote",
+                "definition": "The date on which the ethics committee issued its vote.",
+                "min": 0,
+                "max": "1"
+            },
+            {
+                "id": "Extension.extension:dateOfVote.extension",
+                "path": "Extension.extension.extension",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "id": "Extension.extension:dateOfVote.url",
+                "path": "Extension.extension.url",
+                "fixedUri": "dateOfVote"
+            },
+            {
+                "id": "Extension.extension:dateOfVote.valueDate",
+                "path": "Extension.extension.valueDate",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "date"
+                    }
+                ]
+            },
+            {
+                "id": "Extension.extension:type",
+                "path": "Extension.extension",
+                "sliceName": "type",
+                "short": "Contact type of the ethics committee entry",
+                "definition": "The contact type of the ethics committee entry, used to distinguish between primary and other ethics committees.",
+                "min": 0,
+                "max": "1"
+            },
+            {
+                "id": "Extension.extension:type.extension",
+                "path": "Extension.extension.extension",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "id": "Extension.extension:type.url",
+                "path": "Extension.extension.url",
+                "fixedUri": "type"
+            },
+            {
+                "id": "Extension.extension:type.valueCoding",
+                "path": "Extension.extension.valueCoding",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "Coding"
+                    }
+                ],
+                "binding": {
+                    "strength": "required",
+                    "valueSet": "https://www.imise.uni-leipzig.de/fhir/ValueSet/ContactType"
+                }
+            },
+            {
+                "id": "Extension.url",
+                "path": "Extension.url",
+                "fixedUri": "https://www.imise.uni-leipzig.de/fhir/StructureDefinition/drks-ethics-committee"
+            },
+            {
+                "id": "Extension.value[x]",
+                "path": "Extension.value[x]",
+                "min": 0,
+                "max": "0"
+            }
+        ]
+    }
+}
