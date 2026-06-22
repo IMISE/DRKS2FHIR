@@ -1,0 +1,53 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "drks-hidden-allocation-description",
+    "url": "https://www.imise.uni-leipzig.de/fhir/StructureDefinition/drks-hidden-allocation-description",
+    "version": "1.0.0",
+    "name": "DRKSHiddenAllocationDescription",
+    "title": "DRKS Hidden Allocation Description",
+    "status": "active",
+    "experimental": true,
+    "description": "Free-text description of the mechanism of allocation concealment used in the study.",
+    "fhirVersion": "5.0.0",
+    "kind": "complex-type",
+    "abstract": false,
+    "context": [
+        {
+            "type": "element",
+            "expression": "ResearchStudy"
+        }
+    ],
+    "type": "Extension",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Extension",
+                "path": "Extension",
+                "short": "Mechanism of allocation concealment (free text)",
+                "definition": "Describes how allocation concealment was implemented in the study."
+            },
+            {
+                "id": "Extension.extension",
+                "path": "Extension.extension",
+                "max": "0"
+            },
+            {
+                "id": "Extension.url",
+                "path": "Extension.url",
+                "fixedUri": "https://www.imise.uni-leipzig.de/fhir/StructureDefinition/drks-hidden-allocation-description"
+            },
+            {
+                "id": "Extension.value[x]",
+                "path": "Extension.value[x]",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ]
+            }
+        ]
+    }
+}

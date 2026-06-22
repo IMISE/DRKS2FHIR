@@ -1,0 +1,53 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "drks-is-main-condition",
+  "url": "https://www.imise.uni-leipzig.de/fhir/StructureDefinition/drks-is-main-condition",
+  "version": "1.0.0",
+  "name": "DRKSIsMainCondition",
+  "title": "DRKS Is Main Condition",
+  "status": "active",
+  "experimental": true,
+  "description": "Indicates whether a studied health condition is the main condition of the study. If true, the condition is the primary focus of the study. If false, it is an additional condition.",
+  "fhirVersion": "5.0.0",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "ResearchStudy.condition"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Whether this is the main condition of the study",
+        "definition": "True if this is the main condition of the study, false if it is an additional condition."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://www.imise.uni-leipzig.de/fhir/StructureDefinition/drks-is-main-condition"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      }
+    ]
+  }
+}

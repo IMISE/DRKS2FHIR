@@ -1,0 +1,57 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "drks-trial-status",
+  "url": "https://www.imise.uni-leipzig.de/fhir/StructureDefinition/drks-trial-status",
+  "version": "1.0.0",
+  "name": "DRKSTrialStatus",
+  "title": "DRKS Trial Status",
+  "status": "active",
+  "experimental": true,
+  "description": "The internal workflow and registration status of a study entry within the DRKS registry. This is distinct from the clinical recruitment status (ResearchStudy.progressStatus) and reflects the administrative processing state of the registration.",
+  "fhirVersion": "5.0.0",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "ResearchStudy"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "DRKS internal registration status",
+        "definition": "The internal workflow status of the study within the DRKS registry."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://www.imise.uni-leipzig.de/fhir/StructureDefinition/drks-trial-status"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.imise.uni-leipzig.de/fhir/ValueSet/TrialStatus"
+        }
+      }
+    ]
+  }
+}

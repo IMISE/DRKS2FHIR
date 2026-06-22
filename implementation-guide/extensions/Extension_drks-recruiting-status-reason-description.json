@@ -1,0 +1,53 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "drks-recruiting-status-reason-description",
+    "url": "https://www.imise.uni-leipzig.de/fhir/StructureDefinition/drks-recruiting-status-reason-description",
+    "version": "1.0.0",
+    "name": "DRKSRecruitingStatusReasonDescription",
+    "title": "DRKS Recruiting Status Reason Description",
+    "status": "active",
+    "experimental": true,
+    "description": "Free-text reason why recruitment was stopped or the study was withdrawn. Only applicable when the recruitment status is 'discontinued' or 'withdrawn'.",
+    "fhirVersion": "5.0.0",
+    "kind": "complex-type",
+    "abstract": false,
+    "context": [
+        {
+            "type": "element",
+            "expression": "ResearchStudy.progressStatus"
+        }
+    ],
+    "type": "Extension",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Extension",
+                "path": "Extension",
+                "short": "Reason why recruiting was stopped or study was withdrawn",
+                "definition": "Free-text explanation for the discontinuation or withdrawal of the study."
+            },
+            {
+                "id": "Extension.extension",
+                "path": "Extension.extension",
+                "max": "0"
+            },
+            {
+                "id": "Extension.url",
+                "path": "Extension.url",
+                "fixedUri": "https://www.imise.uni-leipzig.de/fhir/StructureDefinition/drks-recruiting-status-reason-description"
+            },
+            {
+                "id": "Extension.value[x]",
+                "path": "Extension.value[x]",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ]
+            }
+        ]
+    }
+}

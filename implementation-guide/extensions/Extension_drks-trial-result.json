@@ -1,0 +1,237 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "drks-trial-result",
+    "url": "https://www.imise.uni-leipzig.de/fhir/StructureDefinition/drks-trial-result",
+    "version": "1.0.0",
+    "name": "DRKSTrialResult",
+    "title": "DRKS Trial Result",
+    "status": "active",
+    "experimental": true,
+    "description": "Study result metadata from the DRKS that has no native FHIR R5 equivalent on ResearchStudy. Covers IPD sharing plan, result publication dates, and brief results summary.",
+    "fhirVersion": "5.0.0",
+    "kind": "complex-type",
+    "abstract": false,
+    "context": [
+        {
+            "type": "element",
+            "expression": "ResearchStudy"
+        }
+    ],
+    "type": "Extension",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Extension",
+                "path": "Extension",
+                "short": "DRKS study result metadata",
+                "definition": "Groups result-related metadata."
+            },
+            {
+                "id": "Extension.extension",
+                "path": "Extension.extension",
+                "slicing": {
+                    "discriminator": [
+                        {
+                            "type": "value",
+                            "path": "url"
+                        }
+                    ],
+                    "rules": "open"
+                }
+            },
+            {
+                "id": "Extension.extension:ipd-sharing-plan",
+                "path": "Extension.extension",
+                "sliceName": "ipd-sharing-plan",
+                "short": "Whether individual participant data (IPD) sharing is planned",
+                "definition": "Indicates whether the study plans to make individual participant data available.",
+                "min": 0,
+                "max": "1"
+            },
+            {
+                "id": "Extension.extension:ipd-sharing-plan.extension",
+                "path": "Extension.extension.extension",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "id": "Extension.extension:ipd-sharing-plan.url",
+                "path": "Extension.extension.url",
+                "fixedUri": "ipd-sharing-plan"
+            },
+            {
+                "id": "Extension.extension:ipd-sharing-plan.valueBoolean",
+                "path": "Extension.extension.valueBoolean",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "boolean"
+                    }
+                ]
+            },
+            {
+                "id": "Extension.extension:ipd-sharing-plan-description",
+                "path": "Extension.extension",
+                "sliceName": "ipd-sharing-plan-description",
+                "short": "Description of the IPD sharing plan",
+                "definition": "Free-text description of the IPD sharing plan.",
+                "min": 0,
+                "max": "1"
+            },
+            {
+                "id": "Extension.extension:ipd-sharing-plan-description.extension",
+                "path": "Extension.extension.extension",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "id": "Extension.extension:ipd-sharing-plan-description.url",
+                "path": "Extension.extension.url",
+                "fixedUri": "ipd-sharing-plan-description"
+            },
+            {
+                "id": "Extension.extension:ipd-sharing-plan-description.valueString",
+                "path": "Extension.extension.valueString",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ]
+            },
+            {
+                "id": "Extension.extension:planned-publication",
+                "path": "Extension.extension",
+                "sliceName": "planned-publication",
+                "short": "Date of when the first journal publication of results is planned",
+                "definition": "The date on which the study results are planned to be first published in a journal.",
+                "min": 0,
+                "max": "1"
+            },
+            {
+                "id": "Extension.extension:planned-publication.extension",
+                "path": "Extension.extension.extension",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "id": "Extension.extension:planned-publication.url",
+                "path": "Extension.extension.url",
+                "fixedUri": "planned-publication"
+            },
+            {
+                "id": "Extension.extension:planned-publication.valueDate",
+                "path": "Extension.extension.valueDate",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "date"
+                    }
+                ]
+            },
+            {
+                "id": "Extension.extension:first-publication",
+                "path": "Extension.extension",
+                "sliceName": "first-publication",
+                "short": "Date of first journal publication of results",
+                "definition": "The date on which the study results were first published in a journal.",
+                "min": 0,
+                "max": "1"
+            },
+            {
+                "id": "Extension.extension:first-publication.extension",
+                "path": "Extension.extension.extension",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "id": "Extension.extension:first-publication.url",
+                "path": "Extension.extension.url",
+                "fixedUri": "first-publication"
+            },
+            {
+                "id": "Extension.extension:first-publication.valueDate",
+                "path": "Extension.extension.valueDate",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "date"
+                    }
+                ]
+            },
+            {
+                "id": "Extension.extension:first-result-publication",
+                "path": "Extension.extension",
+                "sliceName": "first-result-publication",
+                "short": "Date the DRKS entry was first published with results",
+                "definition": "The date on which the DRKS entry was first published with results.",
+                "min": 0,
+                "max": "1"
+            },
+            {
+                "id": "Extension.extension:first-result-publication.extension",
+                "path": "Extension.extension.extension",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "id": "Extension.extension:first-result-publication.url",
+                "path": "Extension.extension.url",
+                "fixedUri": "first-result-publication"
+            },
+            {
+                "id": "Extension.extension:first-result-publication.valueDate",
+                "path": "Extension.extension.valueDate",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "date"
+                    }
+                ]
+            },
+            {
+                "id": "Extension.extension:brief-summary-of-results-description",
+                "path": "Extension.extension",
+                "sliceName": "brief-summary-of-results-description",
+                "short": "Brief summary of study results",
+                "definition": "Free-text brief summary of the study results.",
+                "min": 0,
+                "max": "1"
+            },
+            {
+                "id": "Extension.extension:brief-summary-of-results-description.extension",
+                "path": "Extension.extension.extension",
+                "min": 0,
+                "max": "0"
+            },
+            {
+                "id": "Extension.extension:brief-summary-of-results-description.url",
+                "path": "Extension.extension.url",
+                "fixedUri": "brief-summary-of-results-description"
+            },
+            {
+                "id": "Extension.extension:brief-summary-of-results-description.valueString",
+                "path": "Extension.extension.valueString",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ]
+            },
+            {
+                "id": "Extension.url",
+                "path": "Extension.url",
+                "fixedUri": "https://www.imise.uni-leipzig.de/fhir/StructureDefinition/drks-trial-result"
+            },
+            {
+                "id": "Extension.value[x]",
+                "path": "Extension.value[x]",
+                "min": 0,
+                "max": "0"
+            }
+        ]
+    }
+}

@@ -1,0 +1,53 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "drks-sequence-generation-description",
+    "url": "https://www.imise.uni-leipzig.de/fhir/StructureDefinition/drks-sequence-generation-description",
+    "version": "1.0.0",
+    "name": "DRKSSequenceGenerationDescription",
+    "title": "DRKS Sequence Generation Description",
+    "status": "active",
+    "experimental": true,
+    "description": "Free-text description of the sequence generation method used for randomisation in the study.",
+    "fhirVersion": "5.0.0",
+    "kind": "complex-type",
+    "abstract": false,
+    "context": [
+        {
+            "type": "element",
+            "expression": "ResearchStudy"
+        }
+    ],
+    "type": "Extension",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Extension",
+                "path": "Extension",
+                "short": "Sequence generation method (free text)",
+                "definition": "Describes how the randomisation sequence was generated in the study."
+            },
+            {
+                "id": "Extension.extension",
+                "path": "Extension.extension",
+                "max": "0"
+            },
+            {
+                "id": "Extension.url",
+                "path": "Extension.url",
+                "fixedUri": "https://www.imise.uni-leipzig.de/fhir/StructureDefinition/drks-sequence-generation-description"
+            },
+            {
+                "id": "Extension.value[x]",
+                "path": "Extension.value[x]",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ]
+            }
+        ]
+    }
+}
