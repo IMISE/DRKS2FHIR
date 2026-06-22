@@ -1,0 +1,55 @@
+{
+	"resourceType": "CodeSystem",
+	"id": "RecruitingStatus",
+	"url": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/RecruitingStatus",
+	"version": "1.0.0",
+	"name": "RecruitingStatus",
+	"title": "DRKS Recruiting Status",
+	"status": "active",
+	"experimental": true,
+	"description": "Recruitment status codes describing the current state of participant recruitment for a study registered in the DRKS.",
+	"caseSensitive": true,
+	"content": "complete",
+	"concept": [
+		{
+		  "code": "pending",
+		  "display": "Pending",
+		  "definition": "Recruitment has not yet started."
+		},
+		{
+		  "code": "recruiting",
+		  "display": "Recruiting",
+		  "definition": "The study is actively recruiting participants."
+		},
+		{
+		  "code": "invite-only",
+		  "display": "Invite only",
+		  "definition": "Recruitment is restricted to participants who have been specifically invited."
+		},
+		{
+		  "code": "suspended",
+		  "display": "Suspended",
+		  "definition": "Recruitment has been temporarily halted."
+		},
+		{
+		  "code": "complete-follow-up-continuing",
+		  "display": "Complete follow up continuing",
+		  "definition": "Recruitment is complete, but follow-up of enrolled participants is still ongoing."
+		},
+		{
+		  "code": "complete-follow-up-complete",
+		  "display": "Complete follow up complete",
+		  "definition": "Recruitment and follow-up of all participants are both complete."
+		},
+		{
+		  "code": "discontiniued",
+		  "display": "Discontiniued",
+		  "definition": "The study has been permanently stopped before completion."
+		},
+		{
+		  "code": "withdrawn",
+		  "display": "Withdrawn",
+		  "definition": "The study was withdrawn before any participants were enrolled."
+		}
+	]
+}

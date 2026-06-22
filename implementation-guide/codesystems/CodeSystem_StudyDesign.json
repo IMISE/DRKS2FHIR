@@ -1,0 +1,45 @@
+{
+	"resourceType": "CodeSystem",
+	"id": "StudyDesign",
+	"url": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/StudyDesign",
+	"version": "1.0.0",
+	"name": "StudyDesign",
+	"title": "DRKS Study Design",
+	"status": "active",
+	"experimental": true,
+	"description": "Study design codes for DRKS-registered studies that are not covered by the standard HL7 study-design code system (SEVCO). To be used in combination with the standard code system.",
+	"caseSensitive": true,
+	"content": "complete",
+	"concept": [
+		{
+		  "code": "single-assignment",
+		  "display": "Single assignment",
+		  "definition": "There are no comparison groups. All study participants/subjects receive the same intervention throughout the study."
+		},
+		{
+		  "code": "factorial-assignment",
+		  "display": "Factorial assignment",
+		  "definition": "Comparison of several alternative treatments and their combination. In a 2 x 2 design with 2 different treatments, participants receive either treatment A or treatment B, both treatments combined or neither treatment."
+		},
+		{
+		  "code": "other-assignment",
+		  "display": "Other assignment",
+		  "definition": "The assignment type does not fit any of the defined categories."
+		},
+		{
+		  "code": "blinding-of-caregiver",
+		  "display": "Blinding of caregiver",
+		  "definition": "The caregiver is blinded to the intervention or observation group assigned to the participant."
+		},
+		{
+		  "code": "retrospective-observation",
+		  "display": "Retrospective observation",
+		  "definition": "Study analysing preexisting data."
+		},
+		{
+		  "code": "prospective-observation",
+		  "display": "Prospective observation",
+		  "definition": "Study analysing data collected after the start of the study"
+		}
+	]
+}

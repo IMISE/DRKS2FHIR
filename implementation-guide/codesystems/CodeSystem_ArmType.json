@@ -1,0 +1,30 @@
+{
+	"resourceType": "CodeSystem",
+	"id": "ArmType",
+	"url": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/ArmType",
+	"version": "1.0.0",
+	"name": "ArmType",
+	"title": "DRKS Arm Type",
+	"status": "active",
+	"experimental": true,
+	"description": "Comparison group and control type codes for DRKS-registered studies that are not covered by the standard FHIR research-study-arm-type code system. To be used in combination with the standard code system.",
+	"caseSensitive": true,
+	"content": "complete",
+	"concept": [
+		{
+		  "code": "uncontrolled-single-arm",
+		  "display": "Uncontrolled single arm",
+		  "definition": "There are no comparison groups or there are several groups but they are not compared."
+		},
+		{
+		  "code": "historical",
+		  "display": "Historical",
+		  "definition": "A group of people who received their care in the past, i.e. not at the same time as the people receiving the intervention. This selection is not applicable for randomised controlled trials."
+		},
+		{
+		  "code": "other",
+		  "display": "Other",
+		  "definition": "e.g. the comparison group receives the same treatment but with different in- and exclusion criteria."
+		}
+	]
+}

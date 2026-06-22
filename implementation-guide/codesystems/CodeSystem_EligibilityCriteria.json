@@ -1,0 +1,20 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "EligibilityCriteria",
+  "url": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/EligibilityCriteria",
+  "version": "1.0.0",
+  "name": "EligibilityCriteria",
+  "title": "Eligibility Criteria",
+  "status": "active",
+  "experimental": true,
+  "description": "Codes for eligibility criteria characteristics used in DRKS recruitment data that are not covered by standard terminologies.",
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "healthyVolunteers",
+      "display": "Healthy Volunteers",
+      "definition": "Indicates whether healthy volunteers are accepted as study participants."
+    }
+  ]
+}

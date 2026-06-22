@@ -1,0 +1,55 @@
+{
+	"resourceType": "CodeSystem",
+	"id": "PublicationType",
+	"url": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/PublicationType",
+	"version": "1.0.0",
+	"name": "PublicationType",
+	"title": "DRKS Publication Type",
+	"status": "active",
+	"experimental": true,
+	"description": "Publication and document type codes for artifacts associated with a study registered in the DRKS.",
+	"caseSensitive": true,
+	"content": "complete",
+	"concept": [
+		{
+		  "code": "ecvote",
+		  "display": "Ecvote",
+		  "definition": "A document representing the ethics committee vote for the study."
+		},
+		{
+		  "code": "trial-protocol",
+		  "display": "Trial protocol",
+		  "definition": "The study protocol document as submitted to the ethics committee or registry."
+		},
+		{
+		  "code": "abstract",
+		  "display": "Abstract",
+		  "definition": "An abstract of the study, for example submitted to a conference."
+		},
+		{
+		  "code": "result",
+		  "display": "Result",
+		  "definition": "A publication reporting the results of the study."
+		},
+		{
+		  "code": "other",
+		  "display": "Other",
+		  "definition": "A publication or document that does not fit any of the defined categories."
+		},
+		{
+		  "code": "literature",
+		  "display": "Literature",
+		  "definition": "A literature reference related to the study."
+		},
+		{
+		  "code": "basic-reporting",
+		  "display": "Basic reporting",
+		  "definition": "A basic reporting document fulfilling mandatory reporting requirements for the study."
+		},
+		{
+		  "code": "additional-vote",
+		  "display": "Additional vote",
+		  "definition": "An additional ethics committee vote, for example issued for a protocol amendment."
+		}
+	]
+}

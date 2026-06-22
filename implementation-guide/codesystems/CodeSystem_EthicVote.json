@@ -1,0 +1,30 @@
+{
+	"resourceType": "CodeSystem",
+	"id": "EthicVote",
+	"url": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/EthicVote",
+	"version": "1.0.0",
+	"name": "EthicVote",
+	"title": "DRKS Ethic Vote",
+	"status": "active",
+	"experimental": true,
+	"description": "Internal ethics committee vote result codes as used in the DRKS (Deutsches Register Klinischer Studien). Represents the outcome of the ethics committee review for a registered clinical study.",
+	"caseSensitive": true,
+	"content": "complete",
+	"concept": [
+		{
+		  "code": "approved",
+		  "display": "Approved",
+		  "definition": "The ethics committee has approved the study. Recruitment may proceed."
+		},
+		{
+		  "code": "no-approval-required",
+		  "display": "No approval required",
+		  "definition": "The ethics committee has determined that no formal approval is required for this study."
+		},
+		{
+		  "code": "pending",
+		  "display": "Pending",
+		  "definition": "The ethics committee review has been submitted but a decision has not yet been issued."
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"resourceType": "CodeSystem",
+	"id": "ContactType",
+	"url": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/ContactType",
+	"version": "1.0.0",
+	"name": "ContactType",
+	"title": "DRKS Contact Type",
+	"status": "active",
+	"experimental": true,
+	"description": "Contact and material support type codes for DRKS-registered studies that are not covered by the standard FHIR research-study-party-role code system.",
+	"caseSensitive": true,
+	"content": "complete",
+	"concept": [
+		{
+		  "code": "scientific-contact",
+		  "display": "Scientific contact",
+		  "definition": "Contact for scientific queries"
+		},
+		{
+		  "code": "commercial",
+		  "display": "Commercial",
+		  "definition": "Material or monetary support provided by a commercial entity."
+		},
+		{
+		  "code": "private-sponsor",
+		  "display": "Private sponsorship",
+		  "definition": "Material or monetary support provided through private sponsorship."
+		},
+		{
+		  "code": "institutional",
+		  "display": "Institutional",
+		  "definition": "Material or monetary support provided by an institution."
+		},
+		{
+		  "code": "ethics-committee",
+		  "display": "Ethics committee",
+		  "definition": "The primary ethics committee responsible for reviewing and approving the study."
+		},
+		{
+		  "code": "other-ethics-committee",
+		  "display": "Other ethics committee",
+		  "definition": "An additional ethics committee involved in the review of the study, beyond the primary ethics committee."
+		}
+	]
+}

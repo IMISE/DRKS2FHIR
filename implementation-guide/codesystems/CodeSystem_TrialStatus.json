@@ -1,0 +1,45 @@
+{
+	"resourceType": "CodeSystem",
+	"id": "TrialStatus",
+	"url": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/TrialStatus",
+	"version": "1.0.0",
+	"name": "TrialStatus",
+	"title": "DRKS Trial Status",
+	"status": "active",
+	"experimental": true,
+	"description": "Internal workflow and registration status codes of a study entry within the DRKS (Deutsches Register Klinischer Studien).",
+	"caseSensitive": true,
+	"content": "complete",
+	"concept": [
+		{
+		  "code": "in-processing",
+		  "display": "In Processing",
+		  "definition": "The study entry is currently being processed by the DRKS."
+		},
+		{
+		  "code": "registration-requested",
+		  "display": "Registration Requested",
+		  "definition": "The registration of the study has been requested and is awaiting review."
+		},
+		{
+		  "code": "registered",
+		  "display": "Registered",
+		  "definition": "The study has been successfully registered in the DRKS."
+		},
+		{
+		  "code": "returned",
+		  "display": "Returned",
+		  "definition": "The study entry has been returned to the submitter for revision."
+		},
+		{
+		  "code": "update-requested",
+		  "display": "Update Requested",
+		  "definition": "An update to the study entry has been requested and is awaiting review."
+		},
+		{
+		  "code": "updated",
+		  "display": "Updated",
+		  "definition": "The study entry has been successfully updated in the DRKS."
+		}
+	]
+}

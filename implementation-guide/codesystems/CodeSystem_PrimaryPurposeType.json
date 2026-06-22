@@ -1,0 +1,40 @@
+{
+	"resourceType": "CodeSystem",
+	"id": "PurposeType",
+	"url": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/PurposeType",
+	"version": "1.0.0",
+	"name": "PurposeType",
+	"title": "DRKS Purpose Type",
+	"status": "active",
+	"experimental": true,
+	"description": "Purpose type codes for DRKS-registered studies that are not covered by the standard HL7 research-study-prim-purp-type code system. To be used in combination with the standard code system.",
+	"caseSensitive": true,
+	"content": "complete",
+	"concept": [
+		{
+		  "code": "prognosis",
+		  "display": "Prognosis",
+		  "definition": "The study aims to evaluate the expected course or outcome of a disease or condition."
+		},
+		{
+		  "code": "pharmacogenetics",
+		  "display": "Pharmacogenetics",
+		  "definition": "The study aims to investigate the influence of individual genetic variation on drug response."
+		},
+		{
+		  "code": "pharmacogenomics",
+		  "display": "Pharmacogenomics",
+		  "definition": "The study aims to investigate how the genome as a whole influences drug response and metabolism."
+		},
+		{
+		  "code": "health-economics",
+		  "display": "Health economics",
+		  "definition": "The study aims to evaluate the economic costs, benefits or cost-effectiveness of a health intervention or service."
+		},
+		{
+		  "code": "other",
+		  "display": "Other",
+		  "definition": "The primary purpose of the study does not fit any of the defined categories."
+		}
+	]
+}
