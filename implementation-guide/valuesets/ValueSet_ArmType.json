@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "ArmType",
+  "url": "https://www.imise.uni-leipzig.de/fhir/ValueSet/ArmType",
+  "version": "1.0.0",
+  "name": "ArmType",
+  "title": "Arm Type",
+  "status": "active",
+  "experimental": false,
+  "description": "Comparison group and control type codes for DRKS-registered studies, combining standard FHIR research-study-arm-type codes with DRKS-specific extensions.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/research-study-arm-type"
+      },
+      {
+        "system": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/ArmType"
+      }
+    ],
+	"exclude": [
+	  {
+		"system": "http://hl7.org/fhir/research-study-arm-type",
+		"concept": [
+		  { "code": "sham-comparator" }
+		]
+	  }
+	]
+  }
+}

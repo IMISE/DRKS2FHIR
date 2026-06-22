@@ -1,0 +1,18 @@
+{
+  "resourceType": "ValueSet",
+  "id": "PublicationType",
+  "url": "https://www.imise.uni-leipzig.de/fhir/ValueSet/PublicationType",
+  "version": "1.0.0",
+  "name": "PublicationType",
+  "title": "Publication Type",
+  "status": "active",
+  "experimental": true,
+  "description": "All publication and document type codes for artifacts associated with a study registered in the DRKS.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/PublicationType"
+      }
+    ]
+  }
+}

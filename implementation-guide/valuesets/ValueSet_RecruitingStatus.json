@@ -1,0 +1,18 @@
+{
+  "resourceType": "ValueSet",
+  "id": "RecruitingStatus",
+  "url": "https://www.imise.uni-leipzig.de/fhir/ValueSet/RecruitingStatus",
+  "version": "1.0.0",
+  "name": "RecruitingStatus",
+  "title": "Recruiting Status",
+  "status": "active",
+  "experimental": true,
+  "description": "All recruitment status codes describing the current state of participant recruitment for a study registered in the DRKS.",
+  "compose": {
+    "include": [
+      {
+        "system": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/RecruitingStatus"
+      }
+    ]
+  }
+}

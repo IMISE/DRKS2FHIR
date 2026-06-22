@@ -1,0 +1,29 @@
+{
+  "resourceType": "ValueSet",
+  "id": "PrimaryPurposeType",
+  "url": "https://www.imise.uni-leipzig.de/fhir/ValueSet/PrimaryPurposeType",
+  "version": "1.0.0",
+  "name": "PrimaryPurposeType",
+  "title": "Primary Purpose Type",
+  "status": "active",
+  "experimental": true,
+  "description": "Primary purpose type codes for DRKS-registered studies, combining the standard FHIR research-study-prim-purp-type code system with DRKS-specific extensions.",
+  "compose": {
+    "include": [
+		{
+		  "system": "http://terminology.hl7.org/CodeSystem/research-study-prim-purp-type"
+		},
+		{
+		  "system": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/PrimaryPurposeType"
+        }
+	],
+	"exclude": [
+		{
+		  "system": "http://terminology.hl7.org/CodeSystem/research-study-prim-purp-type",
+		  "concept": [
+			{ "code": "device-feasibility", "display": "Device Feasibility" }
+		  ]
+		}
+	]
+  }
+}

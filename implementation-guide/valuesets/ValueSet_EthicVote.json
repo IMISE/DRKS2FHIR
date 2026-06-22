@@ -1,0 +1,18 @@
+{
+  "resourceType": "ValueSet",
+  "id": "EthicVote",
+  "url": "https://www.imise.uni-leipzig.de/fhir/ValueSet/EthicVote",
+  "version": "1.0.0",
+  "name": "EthicVote",
+  "title": "Ethics Committee Vote",
+  "status": "active",
+  "experimental": true,
+  "description": "All ethics committee vote result codes for studies registered in the DRKS.",
+  "compose": {
+	"include": [
+	  {
+		"system": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/EthicVote"
+	  }
+	]
+  }
+}

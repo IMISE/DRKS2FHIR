@@ -1,0 +1,25 @@
+{
+  "resourceType": "ValueSet",
+  "id": "EligibilityCriteria",
+  "url": "https://www.imise.uni-leipzig.de/fhir/ValueSet/EligibilityCriteria",
+  "version": "1.0.0",
+  "name": "EligibilityCriteria",
+  "title": "Eligibility Criteria",
+  "status": "active",
+  "experimental": true,
+  "description": "Codes for eligibility criteria characteristics used in DRKS recruitment data.",
+  "compose": {
+    "include": [
+	  {
+		"system": "http://loinc.org",
+        "concept": [
+          { "code": "76691-5", "display": "Gender identity" },
+          { "code": "30525-0", "display": "Age" }
+        ]
+	  },
+      {
+        "system": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/EligibilityCriteria"
+      }
+    ]
+  }
+}
