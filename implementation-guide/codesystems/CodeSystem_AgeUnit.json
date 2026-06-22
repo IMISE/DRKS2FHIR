@@ -1,0 +1,20 @@
+{
+	"resourceType": "CodeSystem",
+	"id": "AgeUnit",
+	"url": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/AgeUnit",
+	"version": "1.0.0",
+	"name": "AgeUnit",
+	"title": "DRKS Age Unit",
+	"status": "active",
+	"experimental": true,
+	"description": "Age unit codes for eligibility criteria in DRKS-registered studies that are not covered by the UCUM code system.",
+	"caseSensitive": true,
+	"content": "complete",
+	"concept": [
+		{
+		  "code": "week-of-pregnancy",
+		  "display": "Week of pregnancy",
+		  "definition": "Age expressed as gestational week of pregnancy for studies involving pregnant participants."
+		}
+	]
+}
