@@ -68,6 +68,7 @@ internal static class ContactMapper
                 TrialContactType? contactType = roleCode switch
                 {
                     "lead-sponsor" => TrialContactType.PRIMARY_SPONSOR,
+                    "sponsor-investigator" => TrialContactType.PRIMARY_SPONSOR,
                     "sponsor" => TrialContactType.SECONDARY_SPONSOR,
                     "primary-investigator" => TrialContactType.PRINCIPAL_COORDINATING_INVESTIGATOR,
                     "general-contact" => TrialContactType.PUBLIC_QUERIES,
@@ -97,7 +98,7 @@ internal static class ContactMapper
 
         drks.TrialContacts = contacts.Count > 0 ? contacts : null;
         drks.MaterialSupports = materialSupports.Count > 0 ? materialSupports : null;
-        drks.Sponsored = study.AssociatedParty.Any(ap => ap.Role?.Coding.Any(c => c.Code == "lead-sponsor" || c.Code == "sponsor") == true);
+        drks.Sponsored = study.AssociatedParty.Any(ap => ap.Role?.Coding.Any(c => c.Code == "sponsor-investigator") == true);
     }
 
     internal static DrksContact BuildDrksContact(Organization org)
@@ -133,7 +134,9 @@ internal static class ContactMapper
 
                 var (roleSystem, roleCode, roleDisplay) = tc.IdContactIdType?.Type switch
                 {
-                    TrialContactType.PRIMARY_SPONSOR => ("http://hl7.org/fhir/research-study-party-role", "lead-sponsor", "Lead sponsor"),
+                    TrialContactType.PRIMARY_SPONSOR => drks.Sponsored == true
+                        ? ("http://hl7.org/fhir/research-study-party-role", "sponsor-investigator", "Sponsor investigator")
+                        : ("http://hl7.org/fhir/research-study-party-role", "lead-sponsor", "Lead sponsor"),
                     TrialContactType.SECONDARY_SPONSOR => ("http://hl7.org/fhir/research-study-party-role", "sponsor", "Sponsor"),
                     TrialContactType.PRINCIPAL_COORDINATING_INVESTIGATOR => ("http://hl7.org/fhir/research-study-party-role", "primary-investigator", "Principal investigator"),
                     TrialContactType.PUBLIC_QUERIES => ("http://hl7.org/fhir/research-study-party-role", "general-contact", "General contact"),
