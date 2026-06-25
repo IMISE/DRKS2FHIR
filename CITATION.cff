@@ -1,0 +1,51 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: DRKS to FHIR Converter
+message: >-
+  Will export entries from the German Clinical Trial
+  Registry DRKS in HL7 FHIR R5 format (and import
+  respectively).
+type: dataset
+authors:
+  - family-names: Sitte
+    given-names: Lorenz
+    affiliation: Universität Leipzig
+    email: bd70nime@studserv.uni-leipzig.de
+  - family-names: Klopfenstein
+    given-names: Sophie
+    orcid: 'https://orcid.org/0000-0002-8470-2258'
+    affiliation: >-
+      Berlin Institute of Health at Charité -
+      Universitätsmedizin Berlin
+    email: sophie.klopfenstein@charite.de
+  - family-names: Löbe
+    given-names: Matthias
+    affiliation: >-
+      Institut für Medizinische Informatik, Statistik und
+      Epidemiologie (IMISE), Universität Leipzig
+    orcid: 'https://orcid.org/0000-0002-2344-0426'
+    email: matthias.loebe@imise.uni-leipzig.de
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.20848321
+repository-code: 'https://github.com/https://github.com/IMISE/DRKS2FHIR'
+abstract: >-
+  Prototype implementation of a bidirectional mapping
+  between the German Register of Clinical Trials (DRKS) in
+  JSON format and the HL7 FHIR R5 resource ResearchStudy.
+
+
+  Developed as part of the Bachelor’s thesis ‘Mapping
+  clinical trial registry data to the HL7 FHIR standard –
+  analysis, concept development and implementation using the
+  German Clinical Trials Registry as an example’ (Lorenz
+  Sitte, University of Leipzig, 2026).
+keywords:
+  - clinical trials
+  - trial registry
+  - fhir
+  - drks
+  - converter
+license: MIT
