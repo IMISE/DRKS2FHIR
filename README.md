@@ -10,7 +10,7 @@ Entwickelt im Rahmen der Bachelorarbeit *„Überführung von Studienregisterdat
 
 Das DRKS ist das nationale Register klinischer Studien in Deutschland. Da das DRKS derzeit keine standardisierte FHIR-Schnittstelle bereitstellt, wurde im Rahmen dieser Arbeit ein Prototyp entwickelt, der DRKS-Studieneinträge (JSON, Schema-Version 2.0.19) in FHIR-R5-konforme `ResearchStudy`-Ressourcen überführt und wieder zurück.
 
-Es werden **80 von 84 relevanten Feldern** des DRKS-Schemas abgebildet (95,2 % Abdeckung). Die verbleibenden 4 Felder werden beim Rückweg rechnerisch rekonstruiert. Die Verlustfreiheit des Round-Trips wurde mit zwei Testdatensätzen empirisch verifiziert.
+Es werden **81 von 84 relevanten Feldern** des DRKS-Schemas abgebildet. Die verbleibenden 3 Felder werden beim Rückweg rechnerisch rekonstruiert. Die Verlustfreiheit des Round-Trips wurde mit zwei Testdatensätzen empirisch verifiziert.
 
 ---
 
@@ -113,9 +113,9 @@ Verwendete Mapping-Strategien:
 | Strategie | Anzahl | Beschreibung |
 |---|---|---|
 | Direct Mapping | 39 | Feld wird wertunverändert übertragen |
-| Transformed Mapping | 25 | Vokabular- oder Strukturumwandlung erforderlich |
+| Transformed Mapping | 26 | Vokabular- oder Strukturumwandlung erforderlich |
 | Extension Mapping | 16 | Kein natives FHIR-Äquivalent; eigene Extension definiert |
-| No Mapping | 4 | Beim Rückweg rechnerisch rekonstruiert |
+| No Mapping | 3 | Beim Rückweg rechnerisch rekonstruiert |
 
 ---
 
