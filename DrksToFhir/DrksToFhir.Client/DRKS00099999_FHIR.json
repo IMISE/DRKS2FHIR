@@ -1,0 +1,1040 @@
+{
+    "resourceType": "ResearchStudy",
+    "id": "DRKS00099999-FHIR",
+    "contained": [
+        {
+            "resourceType": "Location",
+            "id": "DRKS00099999-Recruitment-Institute-0",
+            "name": "Charité – Universitätsmedizin Berlin, Centrum für Muskuloskeletale Chirurgie",
+            "type": [
+                {
+                    "coding": [
+                        {
+                            "system": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/InstituteType",
+                            "code": "umc"
+                        }
+                    ],
+                    "text": "Uni Medical Center"
+                }
+            ],
+            "address": {
+                "city": "Berlin"
+            }
+        },
+        {
+            "resourceType": "Location",
+            "id": "DRKS00099999-Recruitment-Institute-1",
+            "name": "Universitätsklinikum Hamburg-Eppendorf, Endokrinologie",
+            "type": [
+                {
+                    "coding": [
+                        {
+                            "system": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/InstituteType",
+                            "code": "umc"
+                        }
+                    ],
+                    "text": "Uni Medical Center"
+                }
+            ],
+            "address": {
+                "city": "Hamburg"
+            }
+        },
+        {
+            "resourceType": "Location",
+            "id": "DRKS00099999-Recruitment-Institute-2",
+            "name": "Universitätsklinikum Freiburg, Innere Medizin II",
+            "type": [
+                {
+                    "coding": [
+                        {
+                            "system": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/InstituteType",
+                            "code": "umc"
+                        }
+                    ],
+                    "text": "Uni Medical Center"
+                }
+            ],
+            "address": {
+                "city": "Freiburg"
+            }
+        },
+        {
+            "resourceType": "Location",
+            "id": "DRKS00099999-Recruitment-Institute-3",
+            "name": "Medizinische Universität Wien, Universitätsklinik für Innere Medizin III",
+            "type": [
+                {
+                    "coding": [
+                        {
+                            "system": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/InstituteType",
+                            "code": "umc"
+                        }
+                    ],
+                    "text": "Uni Medical Center"
+                }
+            ],
+            "address": {
+                "city": "Wien"
+            }
+        },
+        {
+            "resourceType": "Group",
+            "id": "DRKS00099999-Recruitment-Eligibility",
+            "type": "person",
+            "membership": "definitional",
+            "characteristic": [
+                {
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://loinc.org",
+                                "code": "76691-5"
+                            }
+                        ],
+                        "text": "Gender identity"
+                    },
+                    "valueCodeableConcept": {
+                        "text": "FEMALE"
+                    },
+                    "exclude": false
+                },
+                {
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://loinc.org",
+                                "code": "30525-0"
+                            }
+                        ],
+                        "text": "Age"
+                    },
+                    "valueRange": {
+                        "low": {
+                            "unit": "a",
+                            "system": "http://unitsofmeasure.org",
+                            "code": "a"
+                        },
+                        "high": {
+                            "unit": "a",
+                            "system": "http://unitsofmeasure.org",
+                            "code": "a"
+                        }
+                    },
+                    "exclude": false
+                },
+                {
+                    "code": {
+                        "text": "FREETEXT"
+                    },
+                    "valueCodeableConcept": {
+                        "text": "Prior treatment with a RANK-ligand inhibitor; i.v. bisphosphonate therapy within the past 3 years; oral bisphosphonate > 3 years cumulative; creatinine clearance < 35 ml/min; hypocalcaemia (serum calcium < 2.0 mmol/l); active malignancy; known hypersensitivity to study medications.",
+                        "_text": {
+                            "extension": [
+                                {
+                                    "extension": [
+                                        {
+                                            "url": "lang",
+                                            "valueCode": "de"
+                                        },
+                                        {
+                                            "url": "content",
+                                            "valueString": "Vorbehandlung mit einem RANK-Ligand-Inhibitor; i.v. Bisphosphonat-Therapie in den letzten 3 Jahren; orales Bisphosphonat > 3 Jahre kumulativ; Kreatinin-Clearance < 35 ml/min; Hypokalzämie (Serumcalcium < 2,0 mmol/l); aktive maligne Erkrankung; bekannte Überempfindlichkeit gegen Studienmedikamente."
+                                        }
+                                    ],
+                                    "url": "http://hl7.org/fhir/StructureDefinition/translation"
+                                }
+                            ]
+                        }
+                    },
+                    "exclude": true
+                },
+                {
+                    "code": {
+                        "text": "FREETEXT"
+                    },
+                    "valueCodeableConcept": {
+                        "text": "Postmenopausal women (≥ 12 months amenorrhoea); age 55–80 years; DXA T-score ≤ -2.5 at lumbar spine or total hip; at least one prevalent morphometric vertebral fracture (Genant grade ≥ 1); written informed consent.",
+                        "_text": {
+                            "extension": [
+                                {
+                                    "extension": [
+                                        {
+                                            "url": "lang",
+                                            "valueCode": "de"
+                                        },
+                                        {
+                                            "url": "content",
+                                            "valueString": "Postmenopausale Frauen (≥ 12 Monate Amenorrhoe); Alter 55–80 Jahre; DXA T-Score ≤ -2,5 an LWS oder Gesamthüfte; mindestens eine prävalente morphometrische Wirbelkörperfraktur (Genant Grad ≥ 1); schriftliche Einwilligung."
+                                        }
+                                    ],
+                                    "url": "http://hl7.org/fhir/StructureDefinition/translation"
+                                }
+                            ]
+                        }
+                    },
+                    "exclude": false
+                },
+                {
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/EligibilityCriteria",
+                                "code": "healthyVolunteers"
+                            }
+                        ],
+                        "text": "Healthy volunteers"
+                    },
+                    "valueBoolean": false,
+                    "exclude": false
+                }
+            ]
+        },
+        {
+            "resourceType": "Organization",
+            "id": "DRKS00099999-AssociatedParty-0",
+            "name": "Charité – Universitätsmedizin Berlin",
+            "contact": [
+                {
+                    "telecom": [
+                        {
+                            "system": "email",
+                            "value": "sponsoring@charite.de"
+                        },
+                        {
+                            "system": "phone",
+                            "value": "+4930450570"
+                        },
+                        {
+                            "system": "url",
+                            "value": "https://www.charite.de"
+                        }
+                    ],
+                    "address": {
+                        "line": [
+                            "Charitéplatz 1"
+                        ],
+                        "city": "Berlin",
+                        "postalCode": "10117",
+                        "country": "DE"
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "Organization",
+            "id": "DRKS00099999-AssociatedParty-1",
+            "name": "Bundesministerium für Bildung und Forschung (BMBF)",
+            "contact": [
+                {
+                    "telecom": [
+                        {
+                            "system": "email",
+                            "value": "info@bmbf.de"
+                        },
+                        {
+                            "system": "phone",
+                            "value": "+4930185700"
+                        },
+                        {
+                            "system": "url",
+                            "value": "https://www.bmbf.de"
+                        }
+                    ],
+                    "address": {
+                        "line": [
+                            "Kapelle-Ufer 1"
+                        ],
+                        "city": "Berlin",
+                        "postalCode": "10117",
+                        "country": "DE"
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "Organization",
+            "id": "DRKS00099999-AssociatedParty-2",
+            "name": "Charité – Universitätsmedizin Berlin, Centrum für Muskuloskeletale Chirurgie",
+            "contact": [
+                {
+                    "name": [
+                        {
+                            "family": "Mustermann",
+                            "given": [
+                                "Max"
+                            ],
+                            "prefix": [
+                                "Prof. Dr. med."
+                            ]
+                        }
+                    ],
+                    "telecom": [
+                        {
+                            "system": "email",
+                            "value": "max.mustermann@charite.de"
+                        },
+                        {
+                            "system": "phone",
+                            "value": "+4930450559001"
+                        },
+                        {
+                            "system": "url",
+                            "value": "https://cmsc.charite.de"
+                        }
+                    ],
+                    "address": {
+                        "line": [
+                            "Augustenburger Platz 1"
+                        ],
+                        "city": "Berlin",
+                        "postalCode": "13353",
+                        "country": "DE"
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "Organization",
+            "id": "DRKS00099999-AssociatedParty-3",
+            "name": "Charité – Universitätsmedizin Berlin",
+            "contact": [
+                {
+                    "name": [
+                        {
+                            "family": "Musterfrau",
+                            "given": [
+                                "Erika"
+                            ],
+                            "prefix": [
+                                "Dr. med."
+                            ]
+                        }
+                    ],
+                    "telecom": [
+                        {
+                            "system": "email",
+                            "value": "bone-rct@charite.de"
+                        },
+                        {
+                            "system": "phone",
+                            "value": "+4930450559002"
+                        }
+                    ],
+                    "address": {
+                        "line": [
+                            "Augustenburger Platz 1"
+                        ],
+                        "city": "Berlin",
+                        "postalCode": "13353",
+                        "country": "DE"
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "Organization",
+            "id": "DRKS00099999-AssociatedParty-4",
+            "name": "Charité – Universitätsmedizin Berlin, Studienzentrale",
+            "contact": [
+                {
+                    "name": [
+                        {
+                            "family": "Schmidt",
+                            "given": [
+                                "Anna"
+                            ]
+                        }
+                    ],
+                    "telecom": [
+                        {
+                            "system": "email",
+                            "value": "bone-rct-info@charite.de"
+                        },
+                        {
+                            "system": "phone",
+                            "value": "+4930450559003"
+                        }
+                    ],
+                    "address": {
+                        "line": [
+                            "Augustenburger Platz 1"
+                        ],
+                        "city": "Berlin",
+                        "postalCode": "13353",
+                        "country": "DE"
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "Organization",
+            "id": "DRKS00099999-AssociatedParty-5",
+            "name": "Bundesministerium für Bildung und Forschung",
+            "contact": [
+                {
+                    "telecom": [
+                        {
+                            "system": "url",
+                            "value": "https://www.bmbf.de"
+                        }
+                    ],
+                    "address": {
+                        "line": [
+                            "Kapelle-Ufer 1"
+                        ],
+                        "city": "Berlin",
+                        "postalCode": "10117",
+                        "country": "DE"
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "Organization",
+            "id": "DRKS00099999-AssociatedParty-6",
+            "name": "Amgen GmbH",
+            "contact": [
+                {
+                    "telecom": [
+                        {
+                            "system": "url",
+                            "value": "https://www.amgen.de"
+                        }
+                    ],
+                    "address": {
+                        "line": [
+                            "Riesstraße 25"
+                        ],
+                        "city": "München",
+                        "postalCode": "80992",
+                        "country": "DE"
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "Organization",
+            "id": "DRKS00099999-Ethics-Committee-Contact",
+            "name": "Ethik-Kommission der Charité – Universitätsmedizin Berlin",
+            "contact": [
+                {
+                    "telecom": [
+                        {
+                            "system": "email",
+                            "value": "ethikkommission@charite.de"
+                        },
+                        {
+                            "system": "phone",
+                            "value": "+493084454310"
+                        },
+                        {
+                            "system": "fax",
+                            "value": "+493084454311"
+                        },
+                        {
+                            "system": "url",
+                            "value": "https://ethikkommission.charite.de"
+                        }
+                    ],
+                    "address": {
+                        "line": [
+                            "Charitéplatz 1"
+                        ],
+                        "city": "Berlin",
+                        "postalCode": "10117",
+                        "country": "DE"
+                    }
+                }
+            ]
+        }
+    ],
+    "extension": [
+        {
+            "url": "https://www.imise.uni-leipzig.de/fhir/StructureDefinition/drks-trial-status",
+            "valueCode": "registered"
+        },
+        {
+            "extension": [
+                {
+                    "url": "applicationDate",
+                    "valueDate": "2023-10-05"
+                },
+                {
+                    "url": "number",
+                    "valueString": "EA1/234/23"
+                },
+                {
+                    "url": "vote",
+                    "valueCoding": {
+                        "system": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/EthicVote",
+                        "code": "approved"
+                    }
+                },
+                {
+                    "url": "dateOfVote",
+                    "valueDate": "2023-11-28"
+                },
+                {
+                    "url": "type",
+                    "valueCoding": {
+                        "system": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/ContactType",
+                        "code": "ethics-committee"
+                    }
+                }
+            ],
+            "url": "https://www.imise.uni-leipzig.de/fhir/StructureDefinition/drks-ethics-committee"
+        },
+        {
+            "extension": [
+                {
+                    "url": "ipd-sharing-plan",
+                    "valueBoolean": true
+                },
+                {
+                    "url": "planned-publication",
+                    "valueDate": "2027-09-30"
+                }
+            ],
+            "url": "https://www.imise.uni-leipzig.de/fhir/StructureDefinition/drks-trial-result"
+        }
+    ],
+    "url": "https://drks.de/search/de/trial/DRKS00099999",
+    "identifier": [
+        {
+            "use": "official",
+            "type": {
+                "text": "drksId"
+            },
+            "system": "https://drks.de",
+            "value": "DRKS00099999"
+        },
+        {
+            "use": "official",
+            "type": {
+                "text": "universalTrialNumber"
+            },
+            "system": "https://trialsearch.who.int/utn.aspx",
+            "value": "U1111-1298-4567"
+        },
+        {
+            "use": "official",
+            "type": {
+                "text": "eudraCtNumber"
+            },
+            "system": "https://eudract.ema.europa.eu",
+            "value": "2023-004521-18"
+        }
+    ],
+    "name": "DRKS00099999 FHIR",
+    "title": "Randomised controlled trial of denosumab versus zoledronic acid in postmenopausal osteoporosis at high fracture risk",
+    "_title": {
+        "extension": [
+            {
+                "extension": [
+                    {
+                        "url": "lang",
+                        "valueCode": "de"
+                    },
+                    {
+                        "url": "content",
+                        "valueString": "Randomisierte kontrollierte Studie zur Wirksamkeit von Denosumab versus Zoledronsäure bei postmenopausaler Osteoporose mit hohem Frakturrisiko"
+                    }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+        ]
+    },
+    "label": [
+        {
+            "type": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/title-type",
+                        "code": "acronym"
+                    }
+                ],
+                "text": "Acronym"
+            },
+            "value": "BONE-RCT"
+        }
+    ],
+    "date": "2024-06-01",
+    "status": "draft",
+    "primaryPurposeType": {
+        "coding": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/research-study-prim-purp-type",
+                "code": "treatment"
+            }
+        ],
+        "text": "Treatment"
+    },
+    "phase": {
+        "coding": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/research-study-phase",
+                "code": "phase-3"
+            }
+        ],
+        "text": "Phase 3"
+    },
+    "studyDesign": [
+        {
+            "coding": [
+                {
+                    "system": "http://hl7.org/fhir/study-design",
+                    "code": "SEVCO:01001"
+                }
+            ],
+            "text": "Interventional research"
+        },
+        {
+            "coding": [
+                {
+                    "system": "http://hl7.org/fhir/study-design",
+                    "code": "SEVCO:01003"
+                }
+            ],
+            "text": "Randomized assignment"
+        },
+        {
+            "coding": [
+                {
+                    "system": "http://hl7.org/fhir/study-design",
+                    "code": "SEVCO:01011"
+                }
+            ],
+            "text": "Parallel cohort design"
+        },
+        {
+            "coding": [
+                {
+                    "system": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/StudyDesign",
+                    "code": "prospective-observation"
+                }
+            ],
+            "text": "Prospective observation"
+        },
+        {
+            "coding": [
+                {
+                    "system": "http://hl7.org/fhir/study-design",
+                    "code": "SEVCO:01028"
+                }
+            ],
+            "text": "Longitudinal data collection"
+        },
+        {
+            "coding": [
+                {
+                    "system": "http://hl7.org/fhir/study-design",
+                    "code": "SEVCO:01060"
+                }
+            ],
+            "text": "Blinding of study participants"
+        },
+        {
+            "coding": [
+                {
+                    "system": "http://hl7.org/fhir/study-design",
+                    "code": "SEVCO:01061"
+                }
+            ],
+            "text": "Blinding of intervention providers"
+        },
+        {
+            "coding": [
+                {
+                    "system": "http://hl7.org/fhir/study-design",
+                    "code": "SEVCO:01062"
+                }
+            ],
+            "text": "Blinding of outcome assessors"
+        }
+    ],
+    "condition": [
+        {
+            "extension": [
+                {
+                    "url": "https://www.imise.uni-leipzig.de/fhir/StructureDefinition/drks-is-main-condition",
+                    "valueBoolean": true
+                }
+            ],
+            "coding": [
+                {
+                    "system": "http://hl7.org/fhir/sid/icd-10",
+                    "code": "M80.0"
+                }
+            ],
+            "text": "Postmenopausal osteoporosis with pathological fracture",
+            "_text": {
+                "extension": [
+                    {
+                        "extension": [
+                            {
+                                "url": "lang",
+                                "valueCode": "de"
+                            },
+                            {
+                                "url": "content",
+                                "valueString": "Postmenopausale Osteoporose mit pathologischer Fraktur"
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+                    }
+                ]
+            }
+        },
+        {
+            "extension": [
+                {
+                    "url": "https://www.imise.uni-leipzig.de/fhir/StructureDefinition/drks-is-main-condition",
+                    "valueBoolean": false
+                }
+            ],
+            "coding": [
+                {
+                    "system": "http://hl7.org/fhir/sid/icd-10",
+                    "code": "M81.0"
+                }
+            ],
+            "text": "Postmenopausal osteoporosis without pathological fracture",
+            "_text": {
+                "extension": [
+                    {
+                        "extension": [
+                            {
+                                "url": "lang",
+                                "valueCode": "de"
+                            },
+                            {
+                                "url": "content",
+                                "valueString": "Postmenopausale Osteoporose ohne pathologische Fraktur"
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+                    }
+                ]
+            }
+        }
+    ],
+    "descriptionSummary": "This phase III trial investigates the superiority of denosumab over zoledronic acid in reducing vertebral fractures in postmenopausal women at high fracture risk. Patients are randomised 1:1 and treated double-blind over 24 months.",
+    "_descriptionSummary": {
+        "extension": [
+            {
+                "extension": [
+                    {
+                        "url": "lang",
+                        "valueCode": "de"
+                    },
+                    {
+                        "url": "content",
+                        "valueString": "Diese Phase-III-Studie untersucht die Überlegenheit von Denosumab gegenüber Zoledronsäure in der Reduktion vertebraler Frakturen bei postmenopausalen Frauen mit hohem Frakturrisiko. Patientinnen werden 1:1 randomisiert und doppelblind über 24 Monate behandelt."
+                    }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+        ]
+    },
+    "description": "Postmenopausal osteoporosis is associated with a high fracture burden. Antiresorptive therapies such as bisphosphonates (zoledronic acid) and RANK-ligand inhibitors (denosumab) are established, but a direct head-to-head comparison is lacking in patients with very high fracture risk (T-score ≤ -2.5 and ≥ 1 prevalent vertebral fracture). This double-blind, randomised phase III trial compares denosumab 60 mg s.c. every 6 months versus zoledronic acid 5 mg i.v. once yearly over 24 months. The primary endpoint is the incidence of new morphometric vertebral fractures. Secondary endpoints include changes in bone mineral density (DXA), bone turnover markers, and safety parameters.",
+    "_description": {
+        "extension": [
+            {
+                "extension": [
+                    {
+                        "url": "lang",
+                        "valueCode": "de"
+                    },
+                    {
+                        "url": "content",
+                        "valueString": "Postmenopausale Osteoporose ist mit einer hohen Frakturlast assoziiert. Antiresorptive Therapien wie Bisphosphonate (Zoledronsäure) und RANK-Ligand-Inhibitoren (Denosumab) sind etabliert, ein direkter Kopf-an-Kopf-Vergleich fehlt jedoch bei Patientinnen mit sehr hohem Frakturrisiko (T-Score ≤ -2,5 und ≥ 1 vertebrale Prävalenzfraktur). Diese doppelblinde, randomisierte Phase-III-Studie vergleicht Denosumab 60 mg s.c. alle 6 Monate versus Zoledronsäure 5 mg i.v. einmal jährlich über 24 Monate. Primärer Endpunkt ist die Inzidenz neuer morphometrischer Wirbelkörperfrakturen. Sekundäre Endpunkte umfassen Veränderungen der Knochenmineraldichte (DXA), Marker des Knochenumbaus sowie Sicherheitsparameter."
+                    }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+        ]
+    },
+    "site": [
+        {
+            "reference": "#DRKS00099999-Recruitment-Institute-0",
+            "display": "Location"
+        },
+        {
+            "reference": "#DRKS00099999-Recruitment-Institute-1",
+            "display": "Location"
+        },
+        {
+            "reference": "#DRKS00099999-Recruitment-Institute-2",
+            "display": "Location"
+        },
+        {
+            "reference": "#DRKS00099999-Recruitment-Institute-3",
+            "display": "Location"
+        }
+    ],
+    "associatedParty": [
+        {
+            "role": {
+                "coding": [
+                    {
+                        "system": "http://hl7.org/fhir/research-study-party-role",
+                        "code": "lead-sponsor"
+                    }
+                ],
+                "text": "Lead sponsor"
+            },
+            "party": {
+                "reference": "#DRKS00099999-AssociatedParty-0",
+                "display": "Organization"
+            }
+        },
+        {
+            "role": {
+                "coding": [
+                    {
+                        "system": "http://hl7.org/fhir/research-study-party-role",
+                        "code": "sponsor"
+                    }
+                ],
+                "text": "Sponsor"
+            },
+            "party": {
+                "reference": "#DRKS00099999-AssociatedParty-1",
+                "display": "Organization"
+            }
+        },
+        {
+            "role": {
+                "coding": [
+                    {
+                        "system": "http://hl7.org/fhir/research-study-party-role",
+                        "code": "primary-investigator"
+                    }
+                ],
+                "text": "Principal investigator"
+            },
+            "party": {
+                "reference": "#DRKS00099999-AssociatedParty-2",
+                "display": "Organization"
+            }
+        },
+        {
+            "role": {
+                "coding": [
+                    {
+                        "system": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/ContactType",
+                        "code": "scientific-contact"
+                    }
+                ],
+                "text": "Scientific contact"
+            },
+            "party": {
+                "reference": "#DRKS00099999-AssociatedParty-3",
+                "display": "Organization"
+            }
+        },
+        {
+            "role": {
+                "coding": [
+                    {
+                        "system": "http://hl7.org/fhir/research-study-party-role",
+                        "code": "general-contact"
+                    }
+                ],
+                "text": "General contact"
+            },
+            "party": {
+                "reference": "#DRKS00099999-AssociatedParty-4",
+                "display": "Organization"
+            }
+        },
+        {
+            "role": {
+                "coding": [
+                    {
+                        "system": "http://hl7.org/fhir/research-study-party-role",
+                        "code": "funding-source"
+                    }
+                ],
+                "text": "Funding source"
+            },
+            "party": {
+                "reference": "#DRKS00099999-AssociatedParty-5",
+                "display": "Organization"
+            }
+        },
+        {
+            "role": {
+                "coding": [
+                    {
+                        "system": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/ContactType",
+                        "code": "commercial"
+                    }
+                ],
+                "text": "Commercial"
+            },
+            "party": {
+                "reference": "#DRKS00099999-AssociatedParty-6",
+                "display": "Organization"
+            }
+        },
+        {
+            "role": {
+                "coding": [
+                    {
+                        "system": "http://hl7.org/fhir/research-study-party-role",
+                        "code": "irb"
+                    }
+                ],
+                "text": "Institutional Review Board"
+            },
+            "party": {
+                "reference": "#DRKS00099999-Ethics-Committee-Contact",
+                "display": "Organization"
+            }
+        }
+    ],
+    "progressStatus": [
+        {
+            "state": {
+                "coding": [
+                    {
+                        "system": "http://hl7.org/fhir/research-study-status",
+                        "code": "approved"
+                    }
+                ],
+                "text": "Approved"
+            },
+            "actual": false,
+            "period": {
+                "start": "2024-01-15",
+                "end": "2024-01-15"
+            }
+        },
+        {
+            "state": {
+                "coding": [
+                    {
+                        "system": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/RecruitingStatus",
+                        "code": "pending"
+                    }
+                ],
+                "text": "Pending"
+            }
+        },
+        {
+            "state": {
+                "coding": [
+                    {
+                        "system": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/RecruitingStatus",
+                        "code": "pending"
+                    }
+                ],
+                "text": "Pending"
+            },
+            "actual": false,
+            "period": {
+                "start": "2024-04-01",
+                "end": "2027-03-31"
+            }
+        }
+    ],
+    "recruitment": {
+        "targetNumber": 320,
+        "eligibility": {
+            "reference": "#DRKS00099999-Recruitment-Eligibility",
+            "display": "Group"
+        }
+    },
+    "comparisonGroup": [
+        {
+            "linkId": "1",
+            "name": "observational group",
+            "description": "Intervention arm: Denosumab 60 mg subcutaneously every 6 months (months 0, 6, 12, 18) plus annual placebo infusion i.v.",
+            "_description": {
+                "extension": [
+                    {
+                        "extension": [
+                            {
+                                "url": "lang",
+                                "valueCode": "de"
+                            },
+                            {
+                                "url": "content",
+                                "valueString": "Interventionsarm: Denosumab 60 mg subkutan alle 6 Monate (Monat 0, 6, 12, 18) plus jährliche Placebo-Infusion i.v."
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+                    }
+                ]
+            }
+        },
+        {
+            "linkId": "2",
+            "name": "observational group",
+            "description": "Control arm: Zoledronic acid 5 mg i.v. once yearly (months 0 and 12) plus placebo injection s.c. every 6 months.",
+            "_description": {
+                "extension": [
+                    {
+                        "extension": [
+                            {
+                                "url": "lang",
+                                "valueCode": "de"
+                            },
+                            {
+                                "url": "content",
+                                "valueString": "Kontrollarm: Zoledronsäure 5 mg i.v. einmal jährlich (Monat 0 und 12) plus Placebo-Injektion s.c. alle 6 Monate."
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+                    }
+                ]
+            }
+        }
+    ],
+    "objective": [
+        {
+            "name": "primary",
+            "description": "Incidence of new morphometric vertebral fractures at 24 months, assessed by thoracic and lumbar spine radiographs (Genant classification, grade ≥ 1).",
+            "_description": {
+                "extension": [
+                    {
+                        "extension": [
+                            {
+                                "url": "lang",
+                                "valueCode": "de"
+                            },
+                            {
+                                "url": "content",
+                                "valueString": "Inzidenz neuer morphometrischer Wirbelkörperfrakturen nach 24 Monaten, beurteilt mittels Röntgenaufnahmen der Brust- und Lendenwirbelsäule (Genant-Klassifikation, Grad ≥ 1)."
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "secondary",
+            "description": "Change in bone mineral density (BMD) at lumbar spine, total hip and femoral neck (DXA) at 12 and 24 months; serum CTX and PINP at 3, 6, 12 and 24 months; incidence of non-vertebral fractures; adverse events per CTCAE v5.0.",
+            "_description": {
+                "extension": [
+                    {
+                        "extension": [
+                            {
+                                "url": "lang",
+                                "valueCode": "de"
+                            },
+                            {
+                                "url": "content",
+                                "valueString": "Veränderung der Knochenmineraldichte (BMD) an LWS, Gesamthüfte und Schenkelhals (DXA) nach 12 und 24 Monaten; Serum-CTX und PINP nach 3, 6, 12 und 24 Monaten; Inzidenz nicht-vertebraler Frakturen; unerwünschte Ereignisse gemäß CTCAE v5.0."
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+                    }
+                ]
+            }
+        }
+    ]
+}

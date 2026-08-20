@@ -1,0 +1,938 @@
+{
+    "resourceType": "ResearchStudy",
+    "id": "DRKS00038775-FHIR",
+    "contained": [
+        {
+            "resourceType": "Location",
+            "id": "DRKS00038775-Recruitment-Institute-0",
+            "name": "Immanuelkrankenhaus Berlin Wannsee",
+            "type": [
+                {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                            "code": "HOSP"
+                        }
+                    ],
+                    "text": "Hospital"
+                }
+            ],
+            "address": {
+                "city": "Berlin"
+            }
+        },
+        {
+            "resourceType": "Location",
+            "id": "DRKS00038775-Recruitment-Institute-1",
+            "type": [
+                {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                            "code": "OF"
+                        }
+                    ],
+                    "text": "Outpatient facility"
+                }
+            ],
+            "address": {
+                "city": "Berlin"
+            }
+        },
+        {
+            "resourceType": "Group",
+            "id": "DRKS00038775-Recruitment-Eligibility",
+            "type": "person",
+            "membership": "definitional",
+            "characteristic": [
+                {
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://loinc.org",
+                                "code": "76691-5"
+                            }
+                        ],
+                        "text": "Gender identity"
+                    },
+                    "valueCodeableConcept": {
+                        "text": "ALL"
+                    },
+                    "exclude": false
+                },
+                {
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "http://loinc.org",
+                                "code": "30525-0"
+                            }
+                        ],
+                        "text": "Age"
+                    },
+                    "valueRange": {
+                        "low": {
+                            "value": 18,
+                            "unit": "a",
+                            "system": "http://unitsofmeasure.org",
+                            "code": "a"
+                        }
+                    },
+                    "exclude": false
+                },
+                {
+                    "code": {
+                        "text": "FREETEXT"
+                    },
+                    "valueCodeableConcept": {
+                        "text": "Exclusion criteria include an uncertain diagnosis or minor age.",
+                        "_text": {
+                            "extension": [
+                                {
+                                    "extension": [
+                                        {
+                                            "url": "lang",
+                                            "valueCode": "de"
+                                        },
+                                        {
+                                            "url": "content",
+                                            "valueString": "Ausschlusskriterien umfassen keine sichere Diagnose bzw. Minderjährigkeit."
+                                        }
+                                    ],
+                                    "url": "http://hl7.org/fhir/StructureDefinition/translation"
+                                }
+                            ]
+                        }
+                    },
+                    "exclude": true
+                },
+                {
+                    "code": {
+                        "text": "FREETEXT"
+                    },
+                    "valueCodeableConcept": {
+                        "text": "All adult patients in whom pregnancy-associated osteoporosis, osteoporosis in the context of mastocytosis, or methotrexate-induced osteopathy was diagnosed since the 1990s at Immanuel Hospital Wannsee or at Endokrinologikum will be included in the retrospective data analysis.",
+                        "_text": {
+                            "extension": [
+                                {
+                                    "extension": [
+                                        {
+                                            "url": "lang",
+                                            "valueCode": "de"
+                                        },
+                                        {
+                                            "url": "content",
+                                            "valueString": "Alle volljährigen Patient*innen, bei welchen eine Schwangerschaft-assoziierte Osteoporose oder eine Osteoporose im Rahmen einer Mastozytose oder eine Methotrexat-induzierte Osteopathie diagnostiziert wurde seit den 1990er Jahren am Immanuel Krankenhaus Wannsee bzw. dem Endokrinologikum, werden in die retrospektive Datenanalyse eingeschlossen."
+                                        }
+                                    ],
+                                    "url": "http://hl7.org/fhir/StructureDefinition/translation"
+                                }
+                            ]
+                        }
+                    },
+                    "exclude": false
+                },
+                {
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/EligibilityCriteria",
+                                "code": "healthyVolunteers"
+                            }
+                        ],
+                        "text": "Healthy volunteers"
+                    },
+                    "valueBoolean": false,
+                    "exclude": false
+                }
+            ]
+        },
+        {
+            "resourceType": "Organization",
+            "id": "DRKS00038775-AssociatedParty-0",
+            "name": "Endokrinologikum Berlin",
+            "contact": [
+                {
+                    "name": [
+                        {
+                            "family": "Hoff",
+                            "given": [
+                                "Paula"
+                            ],
+                            "prefix": [
+                                "PD Dr."
+                            ]
+                        }
+                    ],
+                    "telecom": [
+                        {
+                            "system": "email",
+                            "value": "berlin@endokrinologikum.com"
+                        },
+                        {
+                            "system": "phone",
+                            "value": "+49302091562290"
+                        },
+                        {
+                            "system": "url",
+                            "value": "https://www.endokrinologikum-berlin.de/"
+                        }
+                    ],
+                    "address": {
+                        "line": [
+                            "Freidrichstr. 76"
+                        ],
+                        "city": "Berlin",
+                        "postalCode": "10117",
+                        "country": "DE"
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "Organization",
+            "id": "DRKS00038775-AssociatedParty-1",
+            "name": "Endokrinologikum Berlin",
+            "contact": [
+                {
+                    "name": [
+                        {
+                            "family": "Hoff",
+                            "given": [
+                                "Paula"
+                            ],
+                            "prefix": [
+                                "PD Dr."
+                            ]
+                        }
+                    ],
+                    "telecom": [
+                        {
+                            "system": "email",
+                            "value": "paula.hoff@amedes-group.com"
+                        },
+                        {
+                            "system": "phone",
+                            "value": "+49302091562290"
+                        },
+                        {
+                            "system": "url",
+                            "value": "https://www.endokrinologikum-berlin.de/"
+                        }
+                    ],
+                    "address": {
+                        "line": [
+                            "Friedrichstr. 76"
+                        ],
+                        "city": "Berlin",
+                        "postalCode": "10117",
+                        "country": "DE"
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "Organization",
+            "id": "DRKS00038775-AssociatedParty-2",
+            "name": "Endokrinologikum Berlin",
+            "contact": [
+                {
+                    "name": [
+                        {
+                            "family": "Hoff",
+                            "given": [
+                                "Paula"
+                            ],
+                            "prefix": [
+                                "PD Dr."
+                            ]
+                        }
+                    ],
+                    "telecom": [
+                        {
+                            "system": "email",
+                            "value": "paula.hoff@amedes-group.com"
+                        },
+                        {
+                            "system": "phone",
+                            "value": "+49302091562290"
+                        },
+                        {
+                            "system": "url",
+                            "value": "https://www.endokrinologikum-berlin.de/"
+                        }
+                    ],
+                    "address": {
+                        "line": [
+                            "Friedrichstr. 76"
+                        ],
+                        "city": "Berlin",
+                        "postalCode": "10117",
+                        "country": "DE"
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "Organization",
+            "id": "DRKS00038775-AssociatedParty-3",
+            "name": "Endokrinologikum Berlin",
+            "contact": [
+                {
+                    "name": [
+                        {
+                            "family": "Hoff",
+                            "given": [
+                                "Paula"
+                            ],
+                            "prefix": [
+                                "PD Dr."
+                            ]
+                        }
+                    ],
+                    "telecom": [
+                        {
+                            "system": "email",
+                            "value": "paula.hoff@amedes-group.com"
+                        },
+                        {
+                            "system": "phone",
+                            "value": "+49302091562290"
+                        },
+                        {
+                            "system": "url",
+                            "value": "https://www.endokrinologikum-berlin.de/"
+                        }
+                    ],
+                    "address": {
+                        "line": [
+                            "Friedrichstr. 76"
+                        ],
+                        "city": "Berlin",
+                        "postalCode": "10117",
+                        "country": "DE"
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "Organization",
+            "id": "DRKS00038775-AssociatedParty-4",
+            "name": "Immanuel Krankenhaus Berlin, Standort Berlin-Wannsee",
+            "contact": [
+                {
+                    "name": [
+                        {
+                            "family": "Warnecke",
+                            "given": [
+                                "Katja"
+                            ],
+                            "prefix": [
+                                "Dr."
+                            ]
+                        }
+                    ],
+                    "telecom": [
+                        {
+                            "system": "email",
+                            "value": "katja.warnecke@immanuelalbertinen.de"
+                        }
+                    ],
+                    "address": {
+                        "line": [
+                            "Königstraße 63"
+                        ],
+                        "city": "Berlin",
+                        "postalCode": "14109"
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "Organization",
+            "id": "DRKS00038775-AssociatedParty-5",
+            "name": "Immanuel Krankenhaus Berlin, Standort Berlin-Wannsee",
+            "contact": [
+                {
+                    "name": [
+                        {
+                            "family": "Schneider",
+                            "given": [
+                                "Udo"
+                            ],
+                            "prefix": [
+                                "Dr."
+                            ]
+                        }
+                    ],
+                    "telecom": [
+                        {
+                            "system": "email",
+                            "value": "udo.schneider@immanuelalbertinen.de"
+                        }
+                    ],
+                    "address": {
+                        "line": [
+                            "Königstraße 63"
+                        ],
+                        "city": "Berlin",
+                        "postalCode": "14109",
+                        "country": "DE"
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "Organization",
+            "id": "DRKS00038775-AssociatedParty-6",
+            "name": "Endokrinologikum Berlin",
+            "contact": [
+                {
+                    "telecom": [
+                        {
+                            "system": "url",
+                            "value": "https://www.endokrinologikum-berlin.de/"
+                        }
+                    ],
+                    "address": {
+                        "line": [
+                            "Friedrichstr. 76"
+                        ],
+                        "city": "Berlin",
+                        "postalCode": "10117",
+                        "country": "DE"
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "Organization",
+            "id": "DRKS00038775-Ethics-Committee-Contact",
+            "name": "Ethik-Kommission der Ärztekammer Berlin",
+            "contact": [
+                {
+                    "telecom": [
+                        {
+                            "system": "email",
+                            "value": "ek@aekb.de"
+                        },
+                        {
+                            "system": "phone",
+                            "value": "(+49)30-408062601"
+                        },
+                        {
+                            "system": "url",
+                            "value": "www.aekb.de/kammer/kommissionen/ethik-kommission"
+                        }
+                    ],
+                    "address": {
+                        "line": [
+                            "Friedrichstraße 16"
+                        ],
+                        "city": "Berlin",
+                        "postalCode": "10696",
+                        "country": "DE"
+                    }
+                }
+            ]
+        }
+    ],
+    "extension": [
+        {
+            "url": "https://www.imise.uni-leipzig.de/fhir/StructureDefinition/drks-trial-status",
+            "valueCode": "registered"
+        },
+        {
+            "extension": [
+                {
+                    "url": "applicationDate",
+                    "valueDate": "2025-03-18"
+                },
+                {
+                    "url": "number",
+                    "valueString": "Eth-SB-25-018"
+                },
+                {
+                    "url": "vote",
+                    "valueCoding": {
+                        "system": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/EthicVote",
+                        "code": "approved"
+                    }
+                },
+                {
+                    "url": "dateOfVote",
+                    "valueDate": "2025-08-21"
+                },
+                {
+                    "url": "type",
+                    "valueCoding": {
+                        "system": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/ContactType",
+                        "code": "ethics-committee"
+                    }
+                }
+            ],
+            "url": "https://www.imise.uni-leipzig.de/fhir/StructureDefinition/drks-ethics-committee"
+        },
+        {
+            "extension": [
+                {
+                    "url": "ipd-sharing-plan",
+                    "valueBoolean": false
+                }
+            ],
+            "url": "https://www.imise.uni-leipzig.de/fhir/StructureDefinition/drks-trial-result"
+        }
+    ],
+    "identifier": [
+        {
+            "use": "official",
+            "type": {
+                "text": "drksId"
+            },
+            "system": "https://drks.de",
+            "value": "DRKS00038775"
+        }
+    ],
+    "name": "DRKS00038775 FHIR",
+    "title": "Retrospective characterization of patients with rare osteological diseases",
+    "_title": {
+        "extension": [
+            {
+                "extension": [
+                    {
+                        "url": "lang",
+                        "valueCode": "de"
+                    },
+                    {
+                        "url": "content",
+                        "valueString": "Retrospektive Charakterisierung von Patient*innen mit seltenen osteologischen Erkrankungen"
+                    }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+        ]
+    },
+    "relatedArtifact": [
+        {
+            "type": "citation",
+            "classifier": [
+                {
+                    "coding": [
+                        {
+                            "system": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/PublicationType",
+                            "code": "trial-protocol"
+                        }
+                    ],
+                    "text": "Trial Protocol"
+                }
+            ],
+            "display": "Studienprotokoll wie bei der Ethikkommission eingereicht ohne Namen"
+        }
+    ],
+    "date": "2025-12-17",
+    "status": "active",
+    "primaryPurposeType": {
+        "coding": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/research-study-prim-purp-type",
+                "code": "diagnostic"
+            }
+        ],
+        "text": "Diagnostic"
+    },
+    "studyDesign": [
+        {
+            "coding": [
+                {
+                    "system": "http://hl7.org/fhir/study-design",
+                    "code": "SEVCO:01002"
+                }
+            ],
+            "text": "Observational research"
+        },
+        {
+            "coding": [
+                {
+                    "system": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/StudyDesign",
+                    "code": "retrospective-observation"
+                }
+            ],
+            "text": "Retrospective observation"
+        },
+        {
+            "coding": [
+                {
+                    "system": "http://hl7.org/fhir/study-design",
+                    "code": "SEVCO:01027"
+                }
+            ],
+            "text": "Cross sectional data collection"
+        }
+    ],
+    "condition": [
+        {
+            "extension": [
+                {
+                    "url": "https://www.imise.uni-leipzig.de/fhir/StructureDefinition/drks-is-main-condition",
+                    "valueBoolean": true
+                }
+            ],
+            "text": "pregnancy- and lactation-associated osteoporosis, methotrexate-induced osteopathy, osteoporosis in mastocytosis",
+            "_text": {
+                "extension": [
+                    {
+                        "extension": [
+                            {
+                                "url": "lang",
+                                "valueCode": "de"
+                            },
+                            {
+                                "url": "content",
+                                "valueString": "Schwangerschafts- und Stillzeit-assoziierte Osteoporose, Methotrexat-induzierte Osteopathie, Osteoporose bei Mastozytose"
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+                    }
+                ]
+            }
+        },
+        {
+            "extension": [
+                {
+                    "url": "https://www.imise.uni-leipzig.de/fhir/StructureDefinition/drks-is-main-condition",
+                    "valueBoolean": false
+                }
+            ],
+            "text": "ORPHA:647823 Pregnancy and lactation-associated osteoporosis",
+            "_text": {
+                "extension": [
+                    {
+                        "extension": [
+                            {
+                                "url": "lang",
+                                "valueCode": "de"
+                            },
+                            {
+                                "url": "content",
+                                "valueString": "ORPHA:647823 Schwangerschaft- und Stillzeit-assoziierte Osteoporose"
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+                    }
+                ]
+            }
+        }
+    ],
+    "region": [
+        {
+            "coding": [
+                {
+                    "system": "urn:iso:std:iso:3166",
+                    "code": "DE"
+                }
+            ],
+            "text": "Germany"
+        }
+    ],
+    "descriptionSummary": "In Berlin, the care of patients with rare osteological diseases is comparatively well established. With the Department of Osteology at Immanuel Hospital Wannsee, the population of Berlin even has access to an inpatient osteology unit. Outpatient care is also provided. At Endokrinologikum Berlin, patients with rare osteological diseases likewise receive outpatient treatment. Both centers are DVO-certified osteological centers of excellence. Consequently, both centers have a large number of documented cases of various, including rare, osteological diseases, such as pregnancy- and lactation-associated osteoporosis, osteoporosis associated with mastocytosis, and methotrexate-induced osteopathy. Within the framework of this study, we aim to summarize patient and disease characteristics of rare osteological disorders. The published literature is often based on case reports or small case series. We therefore plan a retrospective characterization of patient data. This will include the collection of demographic data, imaging data (characterization of fractures), histological investigations (bone histology), osteodensitometry, laboratory parameters, and medical history (comorbidities and medication), where available.",
+    "_descriptionSummary": {
+        "extension": [
+            {
+                "extension": [
+                    {
+                        "url": "lang",
+                        "valueCode": "de"
+                    },
+                    {
+                        "url": "content",
+                        "valueString": "In Berlin ist die Versorgung von Patient*innen mit seltenen osteologischen Erkrankungen vergleichsweise gut. Mit der Abteilung für Osteologie im Immanuel Krankenhaus Wannsee steht der Berliner Bevölkerung sogar eine stationäre Abteilung für Osteologie zur Verfügung. Auch ambulante Patient*innen werden gesehen. Im Endokrinologikum Berlin finden Patient*innen mit seltenen osteologischen Erkrankungen ebenfalls ambulante Betreuung. Beide Zentren sind DVO zertifizierte osteologische Schwerpunktzentren. Daher finden wir in beiden Zentren zahlreiche dokumentierte Fälle verschiedener auch seltener osteologischer Erkrankungen wie der Schwangerschaft- und Stillzeit-assoziierten Osteoporose, Osteoporose bei Mastozytose und die Methotrexat-induzierte Osteopathie. Wir möchten im Rahmen dieser Studie die Patienten/Krankheitsmerkmale von seltenen osteologischen Erkrankungen zusammenfassen. Oft basiert die publizierte Literatur auf Fallberichten oder kleinen Fallserien. Wir planen eine retrospektive Charakterisierung der Patientendaten. Dabei sollen demographische Daten erfasst werden, falls verfügbar, Bildgebungsdaten (Beschreibung der Fraktur), histologische Untersuchungen (Knochenhistologie), Osteodensitometrien, Laborwerte, Krankheitsvorgeschichte (Vorerkrankungen, Medikation)."
+                    }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+        ]
+    },
+    "description": "Osteoporosis is classified by the WHO as one of the ten most important non-communicable diseases, with increasing numbers of osteoporotic fractures worldwide and in Germany. In addition to age, female sex, and prior fragility fractures, common risk factors include systemic inflammation, glucocorticoid use, diabetes mellitus, and smoking. Despite effective therapies, exclusion of secondary causes is essential in every diagnosis of osteoporosis, including rare osteological disorders.\r\n\r\nThis study focuses on three rare entities: pregnancy- and lactation-associated osteoporosis, osteoporosis associated with mastocytosis, and methotrexate-induced osteopathy. Pregnancy- and lactation-associated osteoporosis is rare but severe, typically occurring peri- or postpartum and often presenting with multiple vertebral fractures. Data on risk factors are scarce and mainly derived from case reports.\r\n\r\nMastocytosis is a rare clonal mast cell disorder that may involve the skeleton and be associated with osteoporosis; however, data on purely osseous manifestations are limited.\r\n\r\nMethotrexate-induced osteopathy is a rare and frequently underrecognized adverse effect of long-term methotrexate therapy, typically manifesting as atraumatic stress fractures of the lower extremities. Risk factors and underlying mechanisms remain poorly understood.\r\n\r\nThe aim of this study is to descriptively assess established osteoporosis risk factors and patient characteristics within these specific cohorts. No comparisons with control groups or between the diseases are planned. By analyzing relatively large case series, this study seeks to raise awareness of rare osteological diseases and to complement the limited evidence base regarding their diagnosis and treatment.",
+    "_description": {
+        "extension": [
+            {
+                "extension": [
+                    {
+                        "url": "lang",
+                        "valueCode": "de"
+                    },
+                    {
+                        "url": "content",
+                        "valueString": "Osteoporose zählt laut WHO zu den zehn wichtigsten Volkskrankheiten, mit weltweit und in Deutschland steigenden Frakturzahlen. Neben Alter, weiblichem Geschlecht und vorausgegangenen Frakturen spielen auch häufige Risikofaktoren wie systemische Inflammation, Glukokortikoidtherapie, Diabetes mellitus und Rauchen eine Rolle. Trotz verfügbarer wirksamer Therapien ist bei jeder Osteoporose-Diagnose der Ausschluss sekundärer Ursachen essenziell. Neben häufigen sekundären Ursachen existieren auch seltene osteologische Erkrankungen.\r\n\r\nDiese Studie fokussiert auf drei seltene Entitäten: schwangerschafts- und stillzeitassoziierte Osteoporose, Osteoporose bei Mastozytose und die Methotrexat-induzierte Osteopathie. Die schwangerschaftsassoziierte Osteoporose ist selten, aber schwerwiegend, tritt meist peri- oder postpartal auf und geht häufig mit multiplen Wirbelkörperfrakturen einher. Daten zu Risikofaktoren fehlen, die Evidenz basiert überwiegend auf Fallberichten.\r\n\r\nMastozytose ist eine seltene Erkrankung mit klonaler Mastzellvermehrung, die systemisch verlaufen kann und mit Osteoporose assoziiert ist; insbesondere zur rein ossären Beteiligung liegen nur wenige Daten vor.\r\n\r\nDie Methotrexat-induzierte Osteopathie ist eine seltene, oft übersehene Nebenwirkung einer Langzeit-MTX-Therapie und manifestiert sich typischerweise durch atraumatische Stressfrakturen der unteren Extremitäten. Risikofaktoren und pathophysiologische Mechanismen sind unzureichend verstanden.\r\n\r\nZiel der Studie ist es, bekannte Osteoporose-Risikofaktoren in diesen speziellen Patientenkohorten deskriptiv zu erfassen und Patientencharakteristika zusammenzufassen. Ein Vergleich mit Kontrollgruppen oder zwischen den Erkrankungen ist nicht vorgesehen. Durch die Auswertung vergleichsweise großer Fallserien soll die Aufmerksamkeit für seltene osteologische Erkrankungen erhöht und die begrenzte Datenlage zur Diagnostik und Therapie ergänzt werden."
+                    }
+                ],
+                "url": "http://hl7.org/fhir/StructureDefinition/translation"
+            }
+        ]
+    },
+    "site": [
+        {
+            "reference": "#DRKS00038775-Recruitment-Institute-0",
+            "display": "Location"
+        },
+        {
+            "reference": "#DRKS00038775-Recruitment-Institute-1",
+            "display": "Location"
+        }
+    ],
+    "associatedParty": [
+        {
+            "role": {
+                "coding": [
+                    {
+                        "system": "http://hl7.org/fhir/research-study-party-role",
+                        "code": "lead-sponsor"
+                    }
+                ],
+                "text": "Lead sponsor"
+            },
+            "party": {
+                "reference": "#DRKS00038775-AssociatedParty-0",
+                "display": "Organization"
+            }
+        },
+        {
+            "role": {
+                "coding": [
+                    {
+                        "system": "http://hl7.org/fhir/research-study-party-role",
+                        "code": "primary-investigator"
+                    }
+                ],
+                "text": "Principal investigator"
+            },
+            "party": {
+                "reference": "#DRKS00038775-AssociatedParty-1",
+                "display": "Organization"
+            }
+        },
+        {
+            "role": {
+                "coding": [
+                    {
+                        "system": "http://hl7.org/fhir/research-study-party-role",
+                        "code": "general-contact"
+                    }
+                ],
+                "text": "General contact"
+            },
+            "party": {
+                "reference": "#DRKS00038775-AssociatedParty-2",
+                "display": "Organization"
+            }
+        },
+        {
+            "role": {
+                "coding": [
+                    {
+                        "system": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/ContactType",
+                        "code": "scientific-contact"
+                    }
+                ],
+                "text": "Scientific contact"
+            },
+            "party": {
+                "reference": "#DRKS00038775-AssociatedParty-3",
+                "display": "Organization"
+            }
+        },
+        {
+            "role": {
+                "coding": [
+                    {
+                        "system": "http://hl7.org/fhir/research-study-party-role",
+                        "code": "collaborator"
+                    }
+                ],
+                "text": "OTHER_PRINCIPAL_COORDINATING_INVESTIGATOR"
+            },
+            "party": {
+                "reference": "#DRKS00038775-AssociatedParty-4",
+                "display": "Organization"
+            }
+        },
+        {
+            "role": {
+                "coding": [
+                    {
+                        "system": "http://hl7.org/fhir/research-study-party-role",
+                        "code": "collaborator"
+                    }
+                ],
+                "text": "OTHER_PRINCIPAL_COORDINATING_INVESTIGATOR"
+            },
+            "party": {
+                "reference": "#DRKS00038775-AssociatedParty-5",
+                "display": "Organization"
+            }
+        },
+        {
+            "role": {
+                "coding": [
+                    {
+                        "system": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/ContactType",
+                        "code": "institutional"
+                    }
+                ],
+                "text": "Institutional"
+            },
+            "party": {
+                "reference": "#DRKS00038775-AssociatedParty-6",
+                "display": "Organization"
+            }
+        },
+        {
+            "role": {
+                "coding": [
+                    {
+                        "system": "http://hl7.org/fhir/research-study-party-role",
+                        "code": "irb"
+                    }
+                ],
+                "text": "Institutional Review Board"
+            },
+            "party": {
+                "reference": "#DRKS00038775-Ethics-Committee-Contact",
+                "display": "Organization"
+            }
+        }
+    ],
+    "progressStatus": [
+        {
+            "state": {
+                "coding": [
+                    {
+                        "system": "http://hl7.org/fhir/research-study-status",
+                        "code": "approved"
+                    }
+                ],
+                "text": "Approved"
+            },
+            "actual": false,
+            "period": {
+                "start": "2025-12-17",
+                "end": "2025-12-17"
+            }
+        },
+        {
+            "state": {
+                "coding": [
+                    {
+                        "system": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/RecruitingStatus",
+                        "code": "recruiting"
+                    }
+                ],
+                "text": "Recruiting"
+            }
+        },
+        {
+            "state": {
+                "coding": [
+                    {
+                        "system": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/RecruitingStatus",
+                        "code": "recruiting"
+                    }
+                ],
+                "text": "Recruiting"
+            },
+            "actual": true,
+            "period": {
+                "start": "2025-11-01"
+            }
+        },
+        {
+            "state": {
+                "coding": [
+                    {
+                        "system": "https://www.imise.uni-leipzig.de/fhir/CodeSystem/RecruitingStatus",
+                        "code": "recruiting"
+                    }
+                ],
+                "text": "Recruiting"
+            },
+            "actual": false,
+            "period": {
+                "end": "2026-12-31"
+            }
+        }
+    ],
+    "recruitment": {
+        "eligibility": {
+            "reference": "#DRKS00038775-Recruitment-Eligibility",
+            "display": "Group"
+        }
+    },
+    "comparisonGroup": [
+        {
+            "linkId": "1",
+            "name": "observational group",
+            "description": "Patients from two DVO Osteology Centers of Excellence (Endokrinologikum Berlin and Immanuelkrankenhaus Berlin Wannsee) with one of the following rare osteological diseases: pregnancy- and lactation-associated osteoporosis, methotrexate-induced osteopathy, osteoporosis in mastocytosis",
+            "_description": {
+                "extension": [
+                    {
+                        "extension": [
+                            {
+                                "url": "lang",
+                                "valueCode": "de"
+                            },
+                            {
+                                "url": "content",
+                                "valueString": "Pat. aus zwei DVO Osteologie Schwerpunktzentren (Endokrinologikum Berlin und Immanuelkrankenhaus Berlin Wannsee) mit einer der folgenden seltenen osteologischen Erkrankungen: Schwangerschafts- und Stillzeit-assoziierte Osteoporose, Methotrexat-induzierte Osteopathie, Osteoporose bei Mastozytose"
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+                    }
+                ]
+            }
+        }
+    ],
+    "objective": [
+        {
+            "name": "primary",
+            "description": "The aim of the study is to descriptively describe the cohorts of the aforementioned rare osteological diseases in Berlin, with a particular focus on identifying and descriptively describing the risk factors known for \"normal\" osteoporosis in these specific patient cohorts (risk factors as specified in the DVO guideline 2023).",
+            "_description": {
+                "extension": [
+                    {
+                        "extension": [
+                            {
+                                "url": "lang",
+                                "valueCode": "de"
+                            },
+                            {
+                                "url": "content",
+                                "valueString": "Ziel der Studie ist die deskriptive Beschreibung der Kohorten der o.g. seltenen osteologischen Erkrankungen in Berlin, dabei sollen insbesondere die für „normale“ Osteoporose bekannten Risikofaktoren in diesen speziellen Patientenkohorten erfasst und deskriptiv beschrieben werden (Risikofaktoren wie in der DVO Leitlinie 2023 angegeben)"
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "secondary",
+            "description": "Data collected include:\r\n\r\nType of institution: Endo/IK Wannsee\r\n\r\nPatient age in years (at first manifestation and at initial diagnosis of the disease; recorded twice, as these may differ)\r\n\r\nSex (m/f, coded as 0/1)\r\n\r\nHeight in cm\r\n\r\nWeight in kg\r\n\r\nBMI calculated in kg/m²\r\n\r\nLaboratory parameters at initial diagnosis: calcium, albumin-corrected calcium, PTH, inorganic phosphate, gamma-GT, creatinine, CRP, tryptase, Beta-CrossLaps, alkaline phosphatase (AP), osteocalcin (Ostase), 25-hydroxyvitamin D\r\n\r\nOsteodensitometry: T-score lumbar spine, minimum lumbar spine T-score, total femur T-score, femoral neck T-score\r\n\r\nFracture data: vertebral fractures (number and location, age of fractures at time of diagnosis), peripheral fractures (number and location, with particular emphasis on femoral neck and humerus; other fractures recorded separately, age of fractures at time of diagnosis)\r\n\r\nOsteoporosis medication: recorded by class (osteoanabolic vs antiresorptive; basic therapy = vitamin D and, if applicable, calcium), duration of treatment, sequential therapy\r\n\r\nMedications constituting a current or past risk factor for osteoporosis (glucocorticoids, PPIs, antiepileptics, antidepressants), duration of use, and cumulative dose\r\n\r\nFamily history of parental hip fracture up to the age of 75 years\r\n\r\nEthanol intake >50 g/day\r\n\r\nSmoking status (yes/no/pack-years)\r\n\r\nComorbidities (rheumatoid arthritis, COPD, type 1 diabetes mellitus, type 2 diabetes mellitus, Cushing’s syndrome, hypothyroidism, hyperthyroidism, growth hormone deficiency due to pituitary insufficiency, male hypogonadism due to hormone-ablative therapy/other causes, chronic heart failure, renal insufficiency, Billroth II gastric resection or gastrectomy or bariatric surgery, monoclonal gammopathy of undetermined significance, HIV, axial spondyloarthritis, systemic lupus erythematosus, celiac disease, inflammatory bowel disease, chronic hyponatremia, falls within the past 12 months [including number], depression, neurological diseases [history of stroke, multiple sclerosis, Parkinson’s disease, epilepsy, dementia/Alzheimer’s disease]).",
+            "_description": {
+                "extension": [
+                    {
+                        "extension": [
+                            {
+                                "url": "lang",
+                                "valueCode": "de"
+                            },
+                            {
+                                "url": "content",
+                                "valueString": "Erfasst werden:\r\n\r\nArt der Einrichtung: Endo/IK Wannsee\r\nAlter des Patienten in Jahren (zur Erstmanifestation und zur Erstdiagnose der Erkrankung; zweimalige Erfassung, da Abweichungen möglich)\r\nGeschlecht (m/w, codiert als 0/1)\r\nKörpergröße in cm\r\nKörpergewicht in kg\r\nBody-Mass-Index (BMI), berechnet in kg/m²\r\nLaborparameter zur Erstdiagnose:\r\nCalcium\r\nAlbumin-korrigiertes Calcium\r\nParathormon (PTH)\r\nAnorganisches Phosphat\r\nGamma-GT\r\nKreatinin\r\nC-reaktives Protein (CRP)\r\nTryptase\r\nBeta-CrossLaps\r\nAlkalische Phosphatase (AP)\r\nOstase\r\n25-Hydroxy-Vitamin D\r\nOsteodensitometrie:\r\nT-Score Lendenwirbelsäule (LWS)\r\nMinimaler T-Score LWS\r\nT-Score Femur gesamt\r\nT-Score Schenkelhals\r\nFrakturdaten:\r\nWirbelkörperfrakturen (Anzahl, Lokalisation, Alter der Frakturen zum Diagnosezeitpunkt)\r\nPeriphere Frakturen (Anzahl, Lokalisation; insbesondere Oberschenkelhals und Humerus; andere Frakturen separat; Alter der Frakturen zum Diagnosezeitpunkt)\r\nOsteoporosemedikation:\r\nEinteilung nach Substanzgruppen (osteoanabol vs. antiresorptiv)\r\nBasismedikation (Vitamin D und ggf. Calcium)\r\nDauer der Medikation\r\nSequenztherapie\r\nMedikation mit osteoporotischem Risikopotenzial (aktuell oder in der Vergangenheit):\r\nGlukokortikoide\r\nProtonenpumpenhemmer (PPI)\r\nAntiepileptika\r\nAntidepressiva\r\nDauer der Anwendung und kumulative Dosis\r\nFamilienanamnese einer Hüftfraktur eines Elternteils bis zum Alter von 75 Jahren\r\nAlkoholkonsum > 50 g/Tag\r\nNikotinkonsum (ja/nein, Pack-Years)\r\nKomorbiditäten:\r\nRheumatoide Arthritis\r\nCOPD\r\nDiabetes mellitus Typ 1\r\nDiabetes mellitus Typ 2\r\nCushing-Syndrom\r\nHypothyreose\r\nHyperthyreose\r\nWachstumshormonmangel bei Hypophyseninsuffizienz\r\nMännlicher Hypogonadismus (hormonablative Therapie oder andere Ursachen)\r\nChronische Herzinsuffizienz\r\nNiereninsuffizienz\r\nBillroth-II-Magenresektion, Gastrektomie oder bariatrische Operation\r\nMonoklonale Gammopathie unklarer Signifikanz (MGUS)\r\nHIV\r\nAxiale Spondyloarthritis\r\nSystemischer Lupus erythematodes\r\nZöliakie\r\nChronisch entzündliche Darmerkrankung\r\nChronische Hyponatriämie\r\nStürze in den letzten 12 Monaten (inkl. Anzahl)\r\nDepression\r\nNeurologische Erkrankungen (Z. n. Schlaganfall, Multiple Sklerose, Morbus Parkinson, Epilepsie, Demenz/Morbus Alzheimer)"
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation"
+                    }
+                ]
+            }
+        }
+    ]
+}
