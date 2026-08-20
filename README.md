@@ -40,11 +40,13 @@ DrksToFhir/
 └── DrksToFhir.Client/             # Kommandozeilenprogramm
     ├── Program.cs
     ├── DRKS_trial-DRKS00038775.json    # Realer Testdatensatz
-    └── DRKS_trial-DRKS00099999.json    # Synthetischer Testdatensatz
+    ├── DRKS_trial-DRKS00099999.json    # Synthetischer Testdatensatz
+    ├── DRKS00038775_FHIR.json          # Generierter FHIR-Datensatz
+    └── DRKS00099999_FHIR.json          # Generierter FHIR-Datensatz
 implementation-guide/              # FHIR Implementation Guide
     ├── CodeSystem_*.json               # 11 eigene CodeSystems
     ├── ValueSet_*.json                 # 11 ValueSets
-    └── Extension_*.json               # 7 StructureDefinitions
+    └── Extension_*.json                # 7 StructureDefinitions
 ```
 
 ---
@@ -52,7 +54,27 @@ implementation-guide/              # FHIR Implementation Guide
 ## Voraussetzungen
 
 - [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9.0)
-- [Firely .NET SDK](https://github.com/FirelyTeam/firely-net-sdk) — `Hl7.Fhir.R5` (Version 6.2.0, wird automatisch über NuGet geladen)
+- Internetverbindung beim ersten Build (NuGet-Paket wird automatisch geladen)
+
+## Verwendete Bibliotheken
+
+| Paket | Version | Zweck |
+|---|---|---|
+| [Hl7.Fhir.R5](https://www.nuget.org/packages/hl7.fhir.r5) (Firely .NET SDK) | 6.2.0 | Typisierte FHIR-R5-Ressourcenmodelle & Serialisierung |
+
+`System.Text.Json` wird für die DRKS-JSON-Deserialisierung genutzt und ist Bestandteil des .NET-SDK (keine separate NuGet-Referenz nötig).
+
+## Installation
+
+```bash
+git clone https://github.com/IMISE/DRKS2FHIR.git
+```
+```bash
+cd DrksToFhir
+```
+```bash
+dotnet build
+```
 
 ---
 
