@@ -1,0 +1,859 @@
+{
+  "$schema" : "https://json-schema.org/draft/2020-12/schema",
+  "$comment" : "All data conforming to this schema must be encoded in UTF-8. Non-ASCII characters are fully supported.",
+  "$defs" : {
+    "AgeEditDto-nullable" : {
+      "type" : [ "object", "null" ],
+      "properties" : {
+        "amount" : {
+          "type" : [ "integer", "null" ],
+          "format" : "int32"
+        },
+        "unit" : {
+          "anyOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string",
+            "enum" : [ "DAYS", "WEEKS", "MONTHS", "YEARS", "NO_MIN_AGE", "NO_MAX_AGE", "WEEK_OF_PREGNANCY" ]
+          } ]
+        }
+      },
+      "required" : [ "unit" ],
+      "additionalProperties" : false
+    },
+    "ContactEditDto-nullable" : {
+      "type" : [ "object", "null" ],
+      "properties" : {
+        "affiliation" : {
+          "type" : [ "string", "null" ],
+          "description" : "Institution",
+          "maxLength" : 800
+        },
+        "city" : {
+          "type" : [ "string", "null" ],
+          "maxLength" : 50
+        },
+        "country" : {
+          "type" : [ "string", "null" ],
+          "description" : "Country code",
+          "pattern" : "^[A-Z]{2}$"
+        },
+        "email" : {
+          "type" : [ "string", "null" ],
+          "maxLength" : 100
+        },
+        "fax" : {
+          "type" : [ "string", "null" ],
+          "description" : "Fax number (with country code)",
+          "maxLength" : 50
+        },
+        "firstName" : {
+          "type" : [ "string", "null" ],
+          "maxLength" : 50
+        },
+        "lastName" : {
+          "type" : [ "string", "null" ],
+          "maxLength" : 50
+        },
+        "phone" : {
+          "type" : [ "string", "null" ],
+          "description" : "Phone number (with country code)",
+          "maxLength" : 50
+        },
+        "streetAndNo" : {
+          "type" : [ "string", "null" ],
+          "description" : "Street address/PO Box",
+          "maxLength" : 100
+        },
+        "title" : {
+          "type" : [ "string", "null" ],
+          "description" : "Academic title",
+          "maxLength" : 60
+        },
+        "url" : {
+          "type" : [ "string", "null" ],
+          "description" : "URL of the institution",
+          "maxLength" : 220
+        },
+        "zip" : {
+          "type" : [ "string", "null" ],
+          "description" : "Postal code",
+          "maxLength" : 25
+        }
+      },
+      "additionalProperties" : false
+    },
+    "IdLocaleEditDto-nullable" : {
+      "type" : [ "object", "null" ],
+      "properties" : {
+        "locale" : {
+          "$ref" : "#/$defs/Locale-nullable",
+          "description" : "Locale code"
+        }
+      },
+      "required" : [ "locale" ],
+      "additionalProperties" : false
+    },
+    "Locale-nullable" : {
+      "type" : [ "string", "null" ],
+      "additionalProperties" : false,
+      "pattern" : "^(en|de)$"
+    },
+    "TrialContactType-nullable" : {
+      "anyOf" : [ {
+        "type" : "null"
+      }, {
+        "type" : "string",
+        "enum" : [ "PRIMARY_SPONSOR", "SECONDARY_SPONSOR", "SCIENTIFIC_QUERIES", "PUBLIC_QUERIES", "PRINCIPAL_COORDINATING_INVESTIGATOR", "ETHICS_COMMITTEE", "OTHER_ETHICS_COMMITTEE", "COLLABORATOR_OTHER_ADDRESS" ]
+      } ]
+    }
+  },
+  "type" : "object",
+  "properties" : {
+    "drksId" : {
+      "type" : [ "string", "null" ],
+      "description" : "Study Description: DRKS-ID",
+      "readOnly" : true
+    },
+    "ethicsCommittee" : {
+      "type" : [ "object", "null" ],
+      "properties" : {
+        "applicationDate" : {
+          "type" : [ "string", "null" ],
+          "format" : "date",
+          "description" : "Ethics Vote and Other IDs: Date of ethics committee application"
+        },
+        "ethicVotes" : {
+          "description" : "Ethics Vote and Other IDs: Ethics Votes",
+          "type" : [ "array", "null" ],
+          "items" : {
+            "type" : "object",
+            "properties" : {
+              "contact" : {
+                "$ref" : "#/$defs/ContactEditDto-nullable",
+                "description" : "Ethics Vote and Other IDs: Address ethics committee",
+                "readOnly" : true
+              },
+              "dateOfVote" : {
+                "type" : [ "string", "null" ],
+                "format" : "date",
+                "description" : "Ethics Vote and Other IDs: Date of ethics review"
+              },
+              "type" : {
+                "$ref" : "#/$defs/TrialContactType-nullable",
+                "description" : "Contact type"
+              },
+              "vote" : {
+                "anyOf" : [ {
+                  "type" : "null"
+                }, {
+                  "type" : "string",
+                  "enum" : [ "APPROVED", "NO_APPROVAL_REQUIRED", "PENDING" ]
+                } ],
+                "description" : "Ethics Vote and Other IDs: Ethics review"
+              }
+            },
+            "additionalProperties" : false
+          }
+        },
+        "number" : {
+          "type" : [ "string", "null" ],
+          "description" : "Ethics Vote and Other IDs: Ethics committee number"
+        }
+      },
+      "additionalProperties" : false,
+      "description" : "Ethics Vote and Other ID"
+    },
+    "lastUpdate" : {
+      "type" : [ "string", "null" ],
+      "format" : "date",
+      "description" : "Study Description: Date of last update in DRKS",
+      "readOnly" : true
+    },
+    "materialSupports" : {
+      "description" : "Contacts: Source of monetary or material support",
+      "type" : [ "array", "null" ],
+      "items" : {
+        "type" : "object",
+        "properties" : {
+          "contact" : {
+            "$ref" : "#/$defs/ContactEditDto-nullable"
+          },
+          "type" : {
+            "anyOf" : [ {
+              "type" : "null"
+            }, {
+              "type" : "string",
+              "enum" : [ "COMMERCIAL", "PUBLIC_FUNDING", "PRIVATE_SPONSORSHIP", "INSTITUTIONAL" ]
+            } ]
+          }
+        },
+        "required" : [ "contact", "type" ],
+        "additionalProperties" : false
+      }
+    },
+    "observationalGroups" : {
+      "description" : "Study Description: Interventional/observational groups",
+      "type" : [ "array", "null" ],
+      "items" : {
+        "type" : "object",
+        "properties" : {
+          "comment" : {
+            "type" : [ "string", "null" ],
+            "description" : "Comment of the observational group"
+          },
+          "idArm" : {
+            "type" : [ "object", "null" ],
+            "properties" : {
+              "arm" : {
+                "type" : [ "integer", "null" ],
+                "format" : "int32"
+              },
+              "locale" : {
+                "$ref" : "#/$defs/Locale-nullable",
+                "description" : "Locale code"
+              }
+            },
+            "additionalProperties" : false
+          }
+        },
+        "required" : [ "idArm" ],
+        "additionalProperties" : false
+      }
+    },
+    "otherSecondaryIds" : {
+      "description" : "Ethics Vote and Other IDs: Other secondary IDs",
+      "type" : [ "array", "null" ],
+      "items" : {
+        "type" : "object",
+        "properties" : {
+          "description" : {
+            "type" : [ "string", "null" ],
+            "description" : "Ethics Vote and Other IDs: Institution name/funding institution"
+          },
+          "value" : {
+            "type" : [ "string", "null" ],
+            "description" : "Ethics Vote and Other IDs: ID/number/funding number"
+          }
+        },
+        "additionalProperties" : false
+      }
+    },
+    "recruitment" : {
+      "type" : [ "object", "null" ],
+      "properties" : {
+        "actualCompletionDate" : {
+          "type" : [ "string", "null" ],
+          "format" : "date",
+          "description" : "Recruitment Data: Actual study completion date"
+        },
+        "actualStartDate" : {
+          "type" : [ "string", "null" ],
+          "format" : "date",
+          "description" : "Recruitment Data: Actual study start date"
+        },
+        "centricType" : {
+          "anyOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string",
+            "enum" : [ "MONOCENTRIC", "MULTICENTRIC" ]
+          } ],
+          "description" : "Recruitment Data: Number of study centers"
+        },
+        "countries" : {
+          "description" : "Recruitment Data: Recruitment countries",
+          "type" : [ "array", "null" ],
+          "items" : {
+            "type" : "object",
+            "properties" : {
+              "idCountry" : {
+                "type" : [ "object", "null" ],
+                "properties" : {
+                  "code" : {
+                    "type" : [ "string", "null" ],
+                    "description" : "Country code",
+                    "pattern" : "^[A-Z]{2}$"
+                  }
+                },
+                "required" : [ "code" ],
+                "additionalProperties" : false
+              }
+            },
+            "additionalProperties" : false
+          }
+        },
+        "gender" : {
+          "anyOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string",
+            "enum" : [ "MALE", "FEMALE", "ALL" ]
+          } ],
+          "description" : "Recruitment Data: Sex"
+        },
+        "healthyVolunteers" : {
+          "type" : [ "boolean", "null" ],
+          "description" : "Study Design: Healthy volunteers"
+        },
+        "institutes" : {
+          "description" : "Recruitment Data: Recruitment location",
+          "type" : [ "array", "null" ],
+          "items" : {
+            "type" : "object",
+            "properties" : {
+              "city" : {
+                "type" : [ "string", "null" ],
+                "maxLength" : 50
+              },
+              "name" : {
+                "type" : [ "string", "null" ]
+              },
+              "type" : {
+                "anyOf" : [ {
+                  "type" : "null"
+                }, {
+                  "type" : "string",
+                  "enum" : [ "UNI_MEDICAL_CENTER", "MEDICAL_CENTER", "PRACTICE", "OTHER" ]
+                } ]
+              }
+            },
+            "additionalProperties" : false
+          }
+        },
+        "maximumAge" : {
+          "$ref" : "#/$defs/AgeEditDto-nullable",
+          "description" : "Recruitment Data: Maximum age"
+        },
+        "minimumAge" : {
+          "$ref" : "#/$defs/AgeEditDto-nullable",
+          "description" : "Recruitment Data: Minimum age"
+        },
+        "plannedParticipants" : {
+          "type" : [ "integer", "null" ],
+          "format" : "int32",
+          "description" : "Recruitment Data: Target sample size"
+        },
+        "recruitmentDescriptions" : {
+          "description" : "Recruitment Data: Recruitment description",
+          "maxItems" : 2,
+          "type" : [ "array", "null" ],
+          "items" : {
+            "type" : "object",
+            "properties" : {
+              "exclusionCriteria" : {
+                "type" : [ "string", "null" ],
+                "description" : "Recruitment Data: Additional inclusion criteria"
+              },
+              "idLocale" : {
+                "$ref" : "#/$defs/IdLocaleEditDto-nullable"
+              },
+              "inclusionCriteria" : {
+                "type" : [ "string", "null" ],
+                "description" : "Recruitment Data: Exclusion criteria"
+              },
+              "reasonDescription" : {
+                "type" : [ "string", "null" ],
+                "description" : "Recruitment Data: Reason if recruiting stopped or withdrawn"
+              }
+            },
+            "required" : [ "idLocale" ],
+            "additionalProperties" : false
+          }
+        },
+        "scheduledCompletionDate" : {
+          "type" : [ "string", "null" ],
+          "format" : "date",
+          "description" : "Recruitment Data: Planned study completion date"
+        },
+        "scheduledStartDate" : {
+          "type" : [ "string", "null" ],
+          "format" : "date",
+          "description" : "Recruitment Data: Planned study start date"
+        },
+        "status" : {
+          "anyOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string",
+            "enum" : [ "PENDING", "RECRUITING", "INVITE_ONLY", "SUSPENDED", "COMPLETE_FOLLOW_UP_CONTINUING", "COMPLETE_FOLLOW_UP_COMPLETE", "DISCONTINIUED", "WITHDRAWN" ]
+          } ],
+          "description" : "Recruitment Data: Recruitment status"
+        },
+        "totalParticipants" : {
+          "type" : [ "integer", "null" ],
+          "format" : "int32",
+          "description" : "Recruitment Data: Final sample size"
+        }
+      },
+      "additionalProperties" : false,
+      "description" : "Recruitment Data"
+    },
+    "registrationDrks" : {
+      "type" : [ "string", "null" ],
+      "format" : "date",
+      "description" : "Study Description: Date of registration in DRKS",
+      "readOnly" : true
+    },
+    "registrationType" : {
+      "anyOf" : [ {
+        "type" : "null"
+      }, {
+        "type" : "string",
+        "enum" : [ "PROSPECTIVE", "RETROSPECTIVE" ]
+      } ],
+      "description" : "Study Description: Type of registration",
+      "readOnly" : true
+    },
+    "secondaryIds" : {
+      "type" : [ "object", "null" ],
+      "properties" : {
+        "eudamedNumber" : {
+          "type" : [ "string", "null" ],
+          "description" : "Ethics Vote and Other IDs: EUDAMED Number",
+          "maxLength" : 50
+        },
+        "eudraCtNumber" : {
+          "type" : [ "string", "null" ],
+          "description" : "Ethics Vote and Other IDs: EudraCT Number",
+          "maxLength" : 50
+        },
+        "noOtherIdentificationNumbersAvailable" : {
+          "type" : [ "boolean", "null" ],
+          "description" : "Ethics Vote and Other IDs: No other identification numbers available"
+        },
+        "otherPrimaryRegisterId" : {
+          "type" : [ "string", "null" ],
+          "description" : "Ethics Vote and Other IDs: Registry number",
+          "maxLength" : 50
+        },
+        "otherPrimaryRegisterName" : {
+          "type" : [ "string", "null" ],
+          "description" : "Ethics Vote and Other IDs: Registry name",
+          "maxLength" : 250
+        },
+        "universalTrialNumber" : {
+          "type" : [ "string", "null" ],
+          "description" : "Ethics Vote and Other IDs: UTN (Universal Trial Number)",
+          "maxLength" : 50
+        }
+      },
+      "additionalProperties" : false,
+      "description" : "Ethics Vote and Other IDs: Further identification numbers"
+    },
+    "sponsored" : {
+      "type" : [ "boolean", "null" ],
+      "description" : "Contacts: Investigator Sponsored/Initiated Trial (IST/IIT)"
+    },
+    "studiedHealthConditions" : {
+      "description" : "Study Design: Health condition or problem studied: Description",
+      "type" : [ "array", "null" ],
+      "items" : {
+        "type" : "object",
+        "properties" : {
+          "catalog" : {
+            "anyOf" : [ {
+              "type" : "null"
+            }, {
+              "type" : "string",
+              "enum" : [ "ICD10", "ORPHA_CODE", "FREETEXT" ]
+            } ],
+            "description" : "Study Design: Codesystem"
+          },
+          "code" : {
+            "type" : [ "string", "null" ],
+            "description" : "Study Design: Code"
+          },
+          "studiedHealthConditionDescriptions" : {
+            "description" : "Study Design: Health condition or problem studied: Description",
+            "maxItems" : 2,
+            "type" : [ "array", "null" ],
+            "items" : {
+              "type" : "object",
+              "properties" : {
+                "comment" : {
+                  "type" : [ "string", "null" ],
+                  "description" : "Study Design: Health condition or problem studied: Description"
+                },
+                "idLocale" : {
+                  "$ref" : "#/$defs/IdLocaleEditDto-nullable"
+                }
+              },
+              "required" : [ "idLocale" ],
+              "additionalProperties" : false
+            }
+          },
+          "type" : {
+            "anyOf" : [ {
+              "type" : "null"
+            }, {
+              "type" : "string",
+              "enum" : [ "MAIN", "OTHER" ]
+            } ],
+            "description" : "Study Design: Health condition or problem studied: main or other"
+          }
+        },
+        "additionalProperties" : false
+      }
+    },
+    "studyCharacteristic" : {
+      "type" : [ "object", "null" ],
+      "properties" : {
+        "allocation" : {
+          "anyOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string",
+            "enum" : [ "SINGLE_ARM_STUDY", "NON_RANDOMIZED_CONTROLLED_TRIAL", "RANDOMIZED_CONTROLLED_TRIAL" ]
+          } ],
+          "description" : "Allocation"
+        },
+        "assignment" : {
+          "anyOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string",
+            "enum" : [ "SINGLE", "PARALLEL", "CROSSOVER", "FACTORIAL", "OTHER" ]
+          } ],
+          "description" : "Assignment"
+        },
+        "blindingType" : {
+          "anyOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string",
+            "enum" : [ "OPEN", "BLINDED" ]
+          } ],
+          "description" : "Blinding"
+        },
+        "blindingWhoList" : {
+          "description" : "Who is blinded?",
+          "type" : [ "array", "null" ],
+          "items" : {
+            "type" : "object",
+            "properties" : {
+              "idBlindingWho" : {
+                "type" : [ "object", "null" ],
+                "properties" : {
+                  "blindingWho" : {
+                    "anyOf" : [ {
+                      "type" : "null"
+                    }, {
+                      "type" : "string",
+                      "enum" : [ "PATIENT_SUBJECT", "INVESTIGATOR_THERAPIST", "CAREGIVER", "ASSESSOR", "DATA_ANALYST" ]
+                    } ]
+                  }
+                },
+                "required" : [ "blindingWho" ],
+                "additionalProperties" : false
+              }
+            },
+            "additionalProperties" : false
+          }
+        },
+        "characteristicDescriptions" : {
+          "maxItems" : 2,
+          "type" : [ "array", "null" ],
+          "items" : {
+            "type" : "object",
+            "properties" : {
+              "idLocale" : {
+                "$ref" : "#/$defs/IdLocaleEditDto-nullable"
+              },
+              "primaryOutcome" : {
+                "type" : [ "string", "null" ],
+                "description" : "Study Description: Primary Outcome"
+              },
+              "secondaryOutcome" : {
+                "type" : [ "string", "null" ],
+                "description" : "Study Description: Secondary Outcome"
+              },
+              "typeOfHiddenAllocation" : {
+                "type" : [ "string", "null" ],
+                "description" : "Study Design: Mechanism of allocation concealment"
+              },
+              "typeOfSequenceGeneration" : {
+                "type" : [ "string", "null" ],
+                "description" : "Study Design: Sequence generation"
+              }
+            },
+            "required" : [ "idLocale" ],
+            "additionalProperties" : false
+          }
+        },
+        "controlTypes" : {
+          "description" : "Control",
+          "type" : [ "array", "null" ],
+          "items" : {
+            "type" : "object",
+            "properties" : {
+              "idControlType" : {
+                "type" : [ "object", "null" ],
+                "properties" : {
+                  "controlType" : {
+                    "anyOf" : [ {
+                      "type" : "null"
+                    }, {
+                      "type" : "string",
+                      "enum" : [ "UNCONTROLLED_SINGLE_ARM", "PLACEBO", "ACTIVE_CONTROL", "HISTORICAL", "RECEIVES_NO_TREATMENT", "OTHER" ]
+                    } ]
+                  }
+                },
+                "required" : [ "controlType" ],
+                "additionalProperties" : false
+              }
+            },
+            "additionalProperties" : false
+          }
+        },
+        "duration" : {
+          "anyOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string",
+            "enum" : [ "LONGITUDINAL", "CROSS_SECTIONAL" ]
+          } ],
+          "description" : "Longitudinal/cross-sectional/other"
+        },
+        "phase" : {
+          "anyOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string",
+            "enum" : [ "N_A", "PHASE_0", "PHASE_I", "PHASE_I_II", "PHASE_II", "PHASE_II_III", "PHASE_III", "PHASE_IV" ]
+          } ],
+          "description" : "Phase"
+        },
+        "purpose" : {
+          "anyOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string",
+            "enum" : [ "TREATMENT", "PREVENTION", "DIAGNOSTIC", "PROGNOSIS", "SUPPORTIVE_CARE", "SCREENING", "HEALTH_CARE_SYSTEM", "BASIC_RESEARCH_PHYSIOLOGICAL_STUDY", "PHARMACOGENETICS", "PHARMACOGENOMICS", "HEALTH_ECONOMICS", "OTHER" ]
+          } ],
+          "description" : "Purpose"
+        },
+        "timing" : {
+          "anyOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string",
+            "enum" : [ "RETROSPECTIVE", "PROSPECTIVE", "BOTH" ]
+          } ],
+          "description" : "Retrospective/prospective"
+        },
+        "type" : {
+          "anyOf" : [ {
+            "type" : "null"
+          }, {
+            "type" : "string",
+            "enum" : [ "INTERVENTIONAL", "NON_INTERVENTIONAL" ]
+          } ],
+          "description" : "Study type"
+        }
+      },
+      "additionalProperties" : false,
+      "description" : "Study Design"
+    },
+    "trialContacts" : {
+      "description" : "Contacts: Contacts/ Other address",
+      "type" : [ "array", "null" ],
+      "items" : {
+        "type" : "object",
+        "properties" : {
+          "contact" : {
+            "$ref" : "#/$defs/ContactEditDto-nullable",
+            "description" : "Contact address data"
+          },
+          "idContactIdType" : {
+            "type" : [ "object", "null" ],
+            "properties" : {
+              "type" : {
+                "$ref" : "#/$defs/TrialContactType-nullable",
+                "description" : "Contact type"
+              }
+            },
+            "required" : [ "type" ],
+            "additionalProperties" : false
+          },
+          "otherType" : {
+            "anyOf" : [ {
+              "type" : "null"
+            }, {
+              "type" : "string",
+              "enum" : [ "OTHER_PRINCIPAL_COORDINATING_INVESTIGATOR", "OTHER_SCIENTIFIC_QUERIES", "OTHER_PUBLIC_QUERIES", "OTHER_SECONDARY_SPONSOR" ]
+            } ],
+            "description" : "Contact type of other addresses and contacts"
+          }
+        },
+        "required" : [ "idContactIdType" ],
+        "additionalProperties" : false
+      }
+    },
+    "trialDescriptions" : {
+      "description" : "Study Description: Study description",
+      "maxItems" : 2,
+      "type" : [ "array", "null" ],
+      "items" : {
+        "type" : "object",
+        "properties" : {
+          "acronym" : {
+            "type" : [ "string", "null" ],
+            "description" : "Acronym/abbreviation of the study",
+            "maxLength" : 255
+          },
+          "idLocale" : {
+            "$ref" : "#/$defs/IdLocaleEditDto-nullable"
+          },
+          "scientificSummary" : {
+            "type" : [ "string", "null" ],
+            "description" : "Brief summary in scientific language of the study"
+          },
+          "summary" : {
+            "type" : [ "string", "null" ],
+            "description" : "Brief summary in lay language of the study"
+          },
+          "title" : {
+            "type" : [ "string", "null" ],
+            "description" : "Title of the study"
+          }
+        },
+        "required" : [ "idLocale" ],
+        "additionalProperties" : false
+      }
+    },
+    "trialResults" : {
+      "type" : [ "object", "null" ],
+      "properties" : {
+        "firstPublication" : {
+          "type" : [ "string", "null" ],
+          "format" : "date",
+          "description" : "Study Results: Date of the first journal publication of results"
+        },
+        "firstResultPublication" : {
+          "type" : [ "string", "null" ],
+          "format" : "date",
+          "description" : "DRKS entry published for the first time with results",
+          "readOnly" : true
+        },
+        "ipdSharingPlan" : {
+          "type" : [ "boolean", "null" ],
+          "description" : "Study Results: Do you plan to make participant-related data (IPD) available?"
+        },
+        "plannedPublication" : {
+          "type" : [ "string", "null" ],
+          "description" : "Study Results: Planned publication"
+        },
+        "publications" : {
+          "description" : "Study Results: Publication of study results",
+          "type" : [ "array", "null" ],
+          "items" : {
+            "type" : "object",
+            "properties" : {
+              "description" : {
+                "type" : [ "string", "null" ],
+                "description" : "Study Results: Publication description"
+              },
+              "document" : {
+                "type" : [ "object", "null" ],
+                "properties" : {
+                  "file" : {
+                    "type" : [ "object", "null" ],
+                    "properties" : {
+                      "base64Encoded" : {
+                        "type" : [ "string", "null" ],
+                        "description" : "File as base64 encoded string"
+                      }
+                    },
+                    "required" : [ "base64Encoded" ],
+                    "additionalProperties" : false,
+                    "description" : "Ethics Vote or Study Results: File"
+                  },
+                  "name" : {
+                    "type" : [ "string", "null" ],
+                    "description" : "Ethics Vote or Study Results: File name",
+                    "maxLength" : 300
+                  }
+                },
+                "additionalProperties" : false,
+                "description" : "Ethics Vote or Study Results: Document"
+              },
+              "link" : {
+                "type" : [ "string", "null" ],
+                "description" : "Study Results: Publication link"
+              },
+              "type" : {
+                "anyOf" : [ {
+                  "type" : "null"
+                }, {
+                  "type" : "string",
+                  "enum" : [ "ECVOTE", "TRIALPROTOCOL", "ABSTRACT", "RESULT", "OTHER", "LITERATURE", "BASICREPORTING", "ADDITONAL_VOTE" ]
+                } ],
+                "description" : "Ethics Vote or Study Results: Publication type, only ECVOTE is allowed for json import"
+              }
+            },
+            "additionalProperties" : false
+          }
+        },
+        "relatedDrksTrials" : {
+          "description" : "Study Results: Related DRKS studies",
+          "type" : [ "array", "null" ],
+          "items" : {
+            "type" : "object",
+            "properties" : {
+              "description" : {
+                "type" : [ "string", "null" ],
+                "description" : "Study Results: Related DRKS study description: Relationship between the registered study and the new study"
+              },
+              "drksId" : {
+                "type" : [ "string", "null" ],
+                "description" : "Study Results: Related DRKS-ID"
+              }
+            },
+            "additionalProperties" : false
+          }
+        },
+        "trialResultsDescriptions" : {
+          "description" : "Study Results: IPD - Individual Participant Data",
+          "maxItems" : 2,
+          "type" : [ "array", "null" ],
+          "items" : {
+            "type" : "object",
+            "properties" : {
+              "briefSummaryOfResultsDescription" : {
+                "type" : [ "string", "null" ],
+                "description" : "Study Results: Brief summary of results"
+              },
+              "idLocale" : {
+                "$ref" : "#/$defs/IdLocaleEditDto-nullable"
+              },
+              "ipdSharingPlanDescription" : {
+                "type" : [ "string", "null" ],
+                "description" : "Study Results: IPD Sharing Plan"
+              }
+            },
+            "required" : [ "idLocale" ],
+            "additionalProperties" : false
+          }
+        }
+      },
+      "additionalProperties" : false,
+      "description" : "Study Results"
+    },
+    "trialStatus" : {
+      "anyOf" : [ {
+        "type" : "null"
+      }, {
+        "type" : "string",
+        "enum" : [ "IN_PROCESSING", "REGISTRATION_REQUESTED", "REGISTERED", "RETURNED", "UPDATE_REQUESTED", "UPDATED" ]
+      } ],
+      "readOnly" : true
+    },
+    "url" : {
+      "type" : [ "string", "null" ],
+      "description" : "Study Description: URL of the study",
+      "maxLength" : 1400
+    }
+  },
+  "additionalProperties" : false
+}
